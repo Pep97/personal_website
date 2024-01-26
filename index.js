@@ -42,7 +42,7 @@
     1. array empty that add tags when clicked
     2. filter the array with the tags inside each project
     3. the projects that have the tags will be shown and the rest will be hidden
-    */
+    
 
     // 1. array empty that add tags when clicked
 
@@ -79,6 +79,7 @@
         });
     });
 
+*/
 
 
 
@@ -88,24 +89,49 @@
 
 
 
-    // let input = document.getElementById("input");
-    // let allTag = [];
-            // document.querySelectorAll('#projects li').forEach(function(li) {
-            //     allTag.push(li.textContent);
-            // });
-
-    //     li.addEventListener('click', () => {
-    //         let input = document.getElementById('input').value;
-    //         input = input.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s/g, "");
-            
-    //         let reversedInput = input.split('').reverse().join('');
-
-    //         if (input === reversedInput) {
-    //             document.querySelector('.result-input').innerHTML = `Yes, ${input} is a palindrome!`;
-    //         } else {
-    //             document.querySelector('.result-input').innerHTML = `No, ${input} is not a palindrome!`;
-    //         }
 
 
+    // balls animation 
+// Some random colors
+const colors = ["#f1bb6e", "#BCA37F", "#EAD7BB"];
 
-    //     });
+const numBalls = 20;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  document.querySelector('#ball-container').append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+
+  setTimeout(() => { // Add this line
+    let anim = el.animate(
+      [
+        { transform: "translate(0, 0)" },
+        { transform: `translate(${to.x}rem, ${to.y}rem)` }
+      ],
+      {
+        duration: (Math.random() + 1) * 2000, // random duration
+        direction: "alternate",
+        fill: "both",
+        iterations: Infinity,
+        easing: "ease-in-out"
+      }
+    );
+  }, 4000); // Add this line
+});

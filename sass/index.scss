@@ -84,11 +84,28 @@ nav{
     background-color: $first;
     height: 650px;
 
+    #ball-container{
+        overflow: hidden;
+        width: 98vw;
+        height: 650px;
+        position: absolute;
+        z-index: 0; // Add this line
+
     
+        .ball {
+            position: absolute;
+            border-radius: 100%;
+            opacity: 0.7;
+
+
+          }
+    }
+
 
 
     .section1 , .section2{
         flex-basis: 50%;
+        z-index: 1;
         
     }
 
@@ -522,12 +539,30 @@ background-color: $first;
     padding-bottom: 30px;
     margin: 0;
 
+    #ball-container{
+        overflow: hidden;
+        width: 98vw;
+        height: 650px;
+        position: absolute;
+        z-index: 0; // Add this line
+
+    
+        .ball {
+            position: absolute;
+            border-radius: 100%;
+            opacity: 0.7;
+
+
+          }
+    }
+
     .container1, .container2{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 0;
+        z-index: 1;
     }
 
     .container1{
@@ -767,6 +802,7 @@ background-color: $first;
 
 }
    
+
 
 footer{
     background-color: $first;
