@@ -1,12 +1,18 @@
 // new variables
 
 $first: #113946;
+$first-shadow: #044964;
 $second: #BCA37F;
 $third: #EAD7BB;
 $fourth: #FFF2D8;
+$fifth: #596FB7;
 
 
 // SASS code
+
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     box-sizing: border-box;
@@ -17,28 +23,60 @@ body{
 
 nav{
     background-color: $first;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0px 1px 1px 0px rgba(188,163,127,1);
     width: 100%;
     height: 2%;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    z-index: 1000; // This ensures the navbar stays on top of other elements
+    
 
     ul{
         display: flex;
         justify-content: flex-end;
         list-style: none;
-        padding: 15px;
+        padding: 15px 0px;
         margin: 0;
 
+        
+
+
+
+
+    }
+
+    li{
+
+        margin: -3px 5px;
+        padding: 3px 0px;
+        border-radius: 30px;
+
+        // &:hover{
+        //     background-color: $third;
+        //     margin: -3px 5px;
+        //     padding: 3px 0px;
+        //     border-radius: 30px;
+    
+        //     a{
+        //         color: $first;
+        //     }
+        // }
+        
     }
 
     a{
         color: $third;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         margin: 0 20px;
         transition: 0.5s;
         padding-right: 5px;
     }
+
+
 }
+
 
 #home{
     display: flex;
@@ -61,13 +99,50 @@ nav{
        margin: 100px 120px;
        display: flex;
         flex-direction: column;
-        
+
+
+        @keyframes text-clip {
+            from {
+              clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            }
+            to {
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+          }
+       
+          
+        @keyframes outer-left {
+            from {
+                transform: translateX(150%);
+            }
+            to {
+                transform: none;
+            }
+        }
+
+        @keyframes outer-left-button {
+           from {
+               transform: translateX(225%);
+           }
+           to {
+               transform: none;
+           }
+       }
+
+        h1, p {
+            margin: 20px 0;
+            padding: 0;
+            animation: text-clip 2s ease-out, outer-left 2s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+        }
+                   
             
 
          h1{
               font-size: 75px;
               font-weight: 700;
          }
+
+         
 
          button{
           
@@ -83,12 +158,11 @@ nav{
             height: 48px;
             width: 350px;
             justify-content: center;
-            
-            
-            &:hover {
-                background-color: $third;
-            }
 
+            margin: 20px 0;
+            padding: 0;
+
+            
             a {
                 text-decoration: none;
                 color: $first;
@@ -96,49 +170,42 @@ nav{
                 font-weight: bold;
                 
             }
+
+              
+              
          }
 
-         // animation
+         button.start-animation {
+        animation: text-clip 2s ease-out, outer-left-button 2s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+        }
+
+         @keyframes swing {
+            15% {
+              transform: translateX(5px);
+            }
+            30% {
+              transform: translateX(-5px);
+            }
+            50% {
+              transform: translateX(3px);
+            }
+            65% {
+              transform: translateX(-3px);
+            }
+            80% {
+              transform: translateX(2px);
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
+         button.move-animation:hover {
+                background-color: $third;
+                animation: swing 0.8s ease-in-out 1;
+
+            }
      
-         @keyframes text-clip {
-             from {
-               clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-             }
-             to {
-               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-             }
-           }
-        
-           
-         @keyframes outer-left {
-             from {
-                 transform: translateX(150%);
-             }
-             to {
-                 transform: none;
-             }
-         }
 
-         @keyframes outer-left-button {
-            from {
-                transform: translateX(225%);
-            }
-            to {
-                transform: none;
-            }
-        }
-
-         h1, p {
-             margin: 20px 0;
-             padding: 0;
-             animation: text-clip 2s ease-out, outer-left 2s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-         }
-
-         button {
-            margin: 20px 0;
-            padding: 0;
-            animation: text-clip 2s ease-out, outer-left-button 2s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-        }
     }
     
     .container2 {
@@ -167,19 +234,147 @@ nav{
 
       }
 
+    
 
 
 
 
     
+
+
       
+}
+
+#run{
+
+height: 50px;
+background-color: $first;
+    .runner-line{
+        position: relative;
+               bottom: 280px;
+
+        @keyframes runAnimation {
+            0% { left: 0; }
+            100% { left: 92%; }
+        }
+    
+        .runner{
+            position: absolute;
+            transform: scale(0.2);
+            animation: runAnimation 6s linear infinite;
+
+            
+        
+    
+            $cycle:0.7;
+            $halfCycle: $cycle/2;
+            $timming : linear;
+            body{background:#123752; height:100%;}
+            #robot{
+                position:relative;
+                height:78vh;width:20vh;
+                margin:0 auto;	
+                animation: robot $cycle+s infinite ease-in-out;
+            z-index:2;
+            div{
+                position:absolute;
+                transform-origin: 50% 0;
+            }
+            .r div{background:#29516D;}
+            .l div{background:#326384;}
+            .leg.r, .arm.l{animation:trans $cycle+s $halfCycle+s infinite $timming;}
+            .leg.l, .arm.r{animation:trans $cycle+s infinite $timming;}
+            .head{
+                top:10vh; left:5vh;
+                width:9vh; height:10vh;
+                margin:0 auto;
+                transform-origin:20% 80%;	
+                animation: head $cycle+s infinite $timming;
+                background:#326384;
+            }
+            .arm{
+                left:5vh; top:20.5vh;
+                width:8vh; height:5.5vh;
+                div{
+                top:100%; left:0;
+                width:100%; height:10vh;
+                box-sizing:border-box;
+                transform:rotate(5deg);
+                animation: arms1 $cycle+s infinite $timming;
+                div{animation: arms2 $cycle+s infinite $timming;}
+                }
+                &.l div{animation-delay:-$halfCycle+s;}
+            }
+            .leg{
+                top:45vh;left:5vh;
+                width:8vh; height:4vh;
+                div{
+                width:100%; height:15vh;
+                top:100%;	
+                animation: legs1 $cycle+s infinite $timming;
+                div{ animation: legs2 $cycle+s infinite $timming;}
+                }
+                &.r div{animation-delay:-$halfCycle+s;}
+            }
+            }
+            .shadow{
+            position:relative;
+                width:22vh; height:3vh;
+                margin:0 auto;
+                border-radius:50%;
+                background:#05314f;
+            animation: shadow $cycle+s infinite $timming;
+            z-index:1;
+            }
+            /************************************************************************************/
+            @keyframes robot {
+                0%,         50%,    100%  {transform: translateY(0vh) rotate(7deg);}
+                15%,    65%  {transform: translateY(-4vh) rotate(5deg);}
+            }
+            @keyframes head {
+                0%, 100% {transform: rotate(-5deg);}
+                25%, 75% {transform: rotate(15deg);}
+                50%      {transform: rotate(0deg);}
+            }
+            @keyframes trans {
+                0%,100% {transform: translateX(0vh);}
+                50%     {transform: translateX(3vh);}
+            }
+            @keyframes arms1 {
+                0%, 100% {transform: rotate(50deg);}
+                50%      {transform: rotate(-70deg);}
+            }
+            @keyframes arms2 {
+                0%, 100% {transform: rotate(-5deg);}
+                50%      {transform: rotate(-100deg);}
+            }
+            @keyframes legs1 {
+                0%, 100% {transform: rotate(60deg);}
+                40%      {transform: rotate(-90deg);}
+            }
+            @keyframes legs2 {
+                0%, 100% {transform: rotate(2deg);}
+                33%      {transform: rotate(150deg);}
+                50%      {transform: rotate(0deg);}
+            }
+            @keyframes shadow {
+                0%,    50%,    100%  {transform: scale(1.5);}
+                25%,    75%       {transform: scale(0.98);}
+            }
+            
+            a{color:#326384;font-family:sans-serif;text-transform:uppercase;display:block;text-align:center;margin:5%;font-weight:bold;}
+            }
+
+    }
+
 }
 
 #about{
     display: flex;
-    color: $third;
-    background-color: black;
-    height: 650px;
+    color: $first;
+    background-color: $fourth;
+    height: 600px;
+    margin-bottom: -10px;
 
     .section1 , .section2{
         flex-basis: 50%;
@@ -202,7 +397,62 @@ nav{
             font-weight: 400;
         }
 
-        // button same as in home page
+        button{
+          
+            align-items: center;
+            appearance: none;
+            background-color: $first;
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(17, 57, 70, 1) 2px 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono",monospace;
+            height: 48px;
+            width: 350px;
+            justify-content: center;
+            margin-top: 14px;
+            
+            a {
+                text-decoration: none;
+                color: $third;
+                font-size: 23px;
+                font-weight: bold;
+                
+            }
+
+            @keyframes swing {
+            15% {
+              transform: translateX(5px);
+            }
+            30% {
+              transform: translateX(-5px);
+            }
+            50% {
+              transform: translateX(3px);
+            }
+            65% {
+              transform: translateX(-3px);
+            }
+            80% {
+              transform: translateX(2px);
+            }
+            100% {
+              transform: translateX(0);
+            }
+          }
+            
+            &:hover {
+                background-color: $first-shadow;
+                animation: swing 0.8s ease-in-out 1;
+
+                a{
+                    color: $third;
+                }
+            }
+
+
+         }
         
 
 
@@ -268,6 +518,9 @@ nav{
     align-items: center;
     justify-content: center;
     color: $third;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    margin: 0;
 
     .container1, .container2{
         display: flex;
@@ -279,7 +532,6 @@ nav{
 
     .container1{
 
-        margin-top: 20px;
         padding: 0;
         width: 90%;
         h1{
@@ -411,12 +663,14 @@ nav{
     
 
     }
+
+
 }
 
 #contact-me{
 
-    background-color: black;
-    color: $third;
+    background-color: $third;
+    color: $first;
     padding-bottom: 70px;
 
 
@@ -425,7 +679,7 @@ nav{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 50px;
+        padding-top: 35px;
         margin: 0;
     }
 
@@ -444,7 +698,7 @@ nav{
         font-size: 22px;
         font-weight: 400;
         margin-top: 50px;
-        margin-bottom: 0;
+        margin-bottom: 5px;
         padding: 0;
     }
 
@@ -452,10 +706,10 @@ nav{
 
         align-items: center;
         appearance: none;
-        background-color: $fourth;
+        background-color: $first;
         border: 0;
         border-radius: 6px;
-        box-shadow: rgba(255, 255, 255, 0.4) 2px 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+        box-shadow: rgba(17, 57, 70, 1) 2px 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
         cursor: pointer;
         display: inline-flex;
         font-family: "JetBrains Mono",monospace;
@@ -489,7 +743,7 @@ nav{
         }
         
         &:hover {
-            background-color: $third;
+            background-color: $first-shadow;
             animation: swing 0.8s ease-in-out 1;
         }
 
@@ -500,6 +754,7 @@ nav{
             color: $first;
             font-size: 23px;
             font-weight: bold;
+            color: $third;
             
         }
 
@@ -511,14 +766,16 @@ nav{
 
 
 }
+   
 
 footer{
-    background-color: black;
+    background-color: $first;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: $third;
+    padding-top: 35px;
 
     h1{
         font-size: 20px;
@@ -572,7 +829,8 @@ footer{
         padding: 0;
     }
 
-
-
-
+    
+    
+    
 }
+
