@@ -42,7 +42,7 @@
     1. array empty that add tags when clicked
     2. filter the array with the tags inside each project
     3. the projects that have the tags will be shown and the rest will be hidden
-    
+    */
 
     // 1. array empty that add tags when clicked
 
@@ -51,7 +51,6 @@
     document.querySelectorAll('#projects li').forEach(function(li) {
         li.addEventListener('click', function() {
             allTag.push(this.textContent.toLocaleLowerCase());
-            console.log(allTag);
 
             // 2. filter the array with the tags inside each project
 
@@ -64,22 +63,30 @@
                 };
                 tagProject.push(obj);
             });
-            console.log(tagProject);
 
             // 2.2 filter the array with the tags inside each project
 
-            if (allTag === tagProject) {
-                console.log('yes');
-            } else {
-                console.log('no');
-            }
+            for (let i = 0; i < allTag.length; i++) {
+              for (let j = 0; j < tagProject.length; j++) {
+                let words = tagProject[j].text.split(' ');
 
-            // not working -> try to loop though TagProject, and don't make as an object, just filter directly.
+                //     3. the projects that equal tags will be shown and the rest will be hidden
+
+                if (words.includes(allTag[i])) {
+                  console.log('Match found: ' + allTag[i]);
+                  document.querySelectorAll('.project')[tagProject[j].id].style.display = '';
+
+                } else {
+                  console.log('Match not found: ' + allTag[i]);
+                  document.querySelectorAll('.project')[tagProject[j].id].style.display = 'none';
+                }
+              }
+            }
 
         });
     });
 
-*/
+
 
 
 
