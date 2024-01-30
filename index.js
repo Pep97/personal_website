@@ -10,22 +10,22 @@
         // change color in navbar li when mouseenter and mouseleave
         document.querySelectorAll('#main-nav a').
         forEach(function(a) {
-        a.addEventListener('mouseenter', function() {
-            this.parentNode.style.backgroundColor = '#EAD7BB';
-            this.parentNode.style.margin = '-3px 5px';
-            this.parentNode.style.padding = '3px 0px';
-            this.parentNode.style.borderRadius = '30px';
-            this.style.color = '#113946';
+            a.addEventListener('mouseenter', function() {
+                this.parentNode.style.backgroundColor = '#EAD7BB';
+                this.parentNode.style.margin = '-2px 5px';
+                this.parentNode.style.padding = '3px 0px';
+                this.parentNode.style.borderRadius = '30px';
+                this.style.color = '#113946';
+            });
+        
+            a.addEventListener('mouseleave', function() {
+                this.parentNode.style.backgroundColor = '';
+                this.parentNode.style.margin = '';
+                this.parentNode.style.padding = '';
+                this.parentNode.style.borderRadius = '';
+                this.style.color = '';
+            });
         });
-    
-        a.addEventListener('mouseleave', function() {
-            this.parentNode.style.backgroundColor = '';
-            this.parentNode.style.margin = '';
-            this.parentNode.style.padding = '';
-            this.parentNode.style.borderRadius = '';
-            this.style.color = '';
-        });
-    });
     
     // search for tag
 
@@ -88,50 +88,50 @@
 
 
 
+// ball animation
 
 
-
-    // balls animation 
-// Some random colors
-const colors = ["#f1bb6e", "#BCA37F", "#EAD7BB"];
-
-const numBalls = 20;
-const balls = [];
-
-for (let i = 0; i < numBalls; i++) {
-  let ball = document.createElement("div");
-  ball.classList.add("ball");
-  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
-  ball.style.transform = `scale(${Math.random()})`;
-  ball.style.width = `${Math.random()}em`;
-  ball.style.height = ball.style.width;
+function animateBalls(containerId, numBalls) {
+  const container = document.querySelector(containerId);
+  const colors = ["#f1bb6e", "#BCA37F", "#EAD7BB"];
   
-  balls.push(ball);
-  document.querySelector('#ball-container').append(ball);
+  for (let i = 0; i < numBalls; i++) {
+    let ball = document.createElement("div");
+    ball.classList.add("ball");
+    ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+    ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+    ball.style.bottom = `${Math.floor(Math.random() * 100)}vh`; // Change 'top' to 'bottom'
+    ball.style.transform = `scale(${Math.random()})`;
+    ball.style.width = `${Math.random()}em`;
+    ball.style.height = ball.style.width;
+    
+    container.append(ball);
+    
+    let to = {
+      x: Math.random() * (i % 2 === 0 ? -11 : 11),
+      y: Math.random() * -12 // Change '12' to '-12' to reverse the direction
+    };
+
+    setTimeout(() => {
+      let anim = ball.animate(
+        [
+          { transform: "translate(0, 0)" },
+          { transform: `translate(${to.x}rem, ${to.y}rem)` }
+        ],
+        {
+          duration: (Math.random() + 1) * 2000, // random duration
+          direction: "alternate",
+          fill: "both",
+          iterations: Infinity,
+          easing: "ease-in-out"
+        }
+      );
+    }, 4000);
+  }
 }
 
-// Keyframes
-balls.forEach((el, i, ra) => {
-  let to = {
-    x: Math.random() * (i % 2 === 0 ? -11 : 11),
-    y: Math.random() * 12
-  };
+// Call the function with the IDs of the containers and the number of balls
+animateBalls('#ball-container', 30);
 
-  setTimeout(() => { // Add this line
-    let anim = el.animate(
-      [
-        { transform: "translate(0, 0)" },
-        { transform: `translate(${to.x}rem, ${to.y}rem)` }
-      ],
-      {
-        duration: (Math.random() + 1) * 2000, // random duration
-        direction: "alternate",
-        fill: "both",
-        iterations: Infinity,
-        easing: "ease-in-out"
-      }
-    );
-  }, 4000); // Add this line
-});
+// the problem is that balls in project aren't distributed evenly
+// create fixed background with the balls

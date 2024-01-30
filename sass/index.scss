@@ -19,7 +19,25 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+
+    #ball-container{
+        overflow: hidden;
+        width: 98vw;
+        height: 650px;
+        position: fixed;
+        z-index: 1; // Add this line
+
+    
+        .ball {
+            position: absolute;
+            border-radius: 100%;
+            opacity: 0.7;
+
+
+          }
+    }
 }
+
 
 nav{
     background-color: $first;
@@ -82,37 +100,23 @@ nav{
     display: flex;
     color: $third;
     background-color: $first;
+    z-index: 0;
     height: 650px;
 
-    #ball-container{
-        overflow: hidden;
-        width: 98vw;
-        height: 650px;
-        position: absolute;
-        z-index: 0; // Add this line
-
     
-        .ball {
-            position: absolute;
-            border-radius: 100%;
-            opacity: 0.7;
-
-
-          }
-    }
 
 
 
     .section1 , .section2{
         flex-basis: 50%;
-        z-index: 1;
+        z-index: 2;
         
     }
 
     
 
     .container1{
-       font-size: 50px;
+       font-size: 45px;
        margin: 100px 120px;
        display: flex;
         flex-direction: column;
@@ -149,15 +153,17 @@ nav{
         h1, p {
             margin: 20px 0;
             padding: 0;
+            text-shadow: 1px 0px 0 black;
             animation: text-clip 2s ease-out, outer-left 2s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
         }
                    
             
 
-         h1{
-              font-size: 75px;
-              font-weight: 700;
-         }
+        h1 {
+            font-size: 65px;
+            font-weight: 700;
+            
+        }
 
          
 
@@ -392,6 +398,10 @@ background-color: $first;
     background-color: $fourth;
     height: 600px;
     margin-bottom: -10px;
+    z-index: 2;
+    position: relative;
+
+
 
     .section1 , .section2{
         flex-basis: 50%;
@@ -507,15 +517,39 @@ background-color: $first;
 
 
                 img{
-                    width: 65px;
-                    height: 65px;
+                    width: 80px;
+                    height: 80px;
                     margin: 0;
                     margin-bottom: 5px;
                     padding: 0;
 
+                    transition: transform 0.3s ease-in-out;
+
+                    &:hover {
+                    transform: scale(1.15);
+                    }
+
 
                 }
+
+                .bootstrap-logo{
+                    width: 68px;
+                    height: 58px;
+                    margin-top: 2px;
+                    padding-bottom: 3px;
+
+                }
+
+                .nextjs-logo{
+                    height: 78px;
+                    width: 78px;
+                }
+    
+    
             }
+
+            
+
             
 
         }
@@ -538,13 +572,31 @@ background-color: $first;
     padding-top: 70px;
     padding-bottom: 30px;
     margin: 0;
+    text-shadow: 1px 0px 0 black;
 
-    #ball-container{
+    #ball-container1{
         overflow: hidden;
         width: 98vw;
-        height: 650px;
+        height: 100vw;
         position: absolute;
-        z-index: 0; // Add this line
+        z-index: 2; // Add this line
+
+    
+        .ball {
+            position: absolute;
+            border-radius: 100%;
+            opacity: 0.7;
+
+
+          }
+    }
+
+    #ball-container2{
+        overflow: hidden;
+        width: 98vw;
+        height: 100vw;
+        position: absolute;
+        z-index: 2; // Add this line
 
     
         .ball {
@@ -707,6 +759,8 @@ background-color: $first;
     background-color: $third;
     color: $first;
     padding-bottom: 70px;
+    position: relative;
+    z-index: 2;
 
 
     .container1{
@@ -812,12 +866,15 @@ footer{
     justify-content: center;
     color: $third;
     padding-top: 35px;
+    text-shadow: 1px 0px 0 black;
 
     h1{
         font-size: 20px;
         font-weight: 700;
         margin: 0;
         padding: 0;
+        z-index: 2;
+        position: relative;
     }
 
     .container-buttons{
@@ -826,6 +883,8 @@ footer{
         align-items: center;
         justify-content: center;
         margin: 15px 0;
+        z-index: 2;
+        position: relative;
 
         .button-linkedin {
             height: 40px;
@@ -833,7 +892,7 @@ footer{
             padding: 0; // Remove padding
             border: none; // Remove border
             background: none; // Remove background
-            margin-right: 15px;
+            margin-right: 10px;
 
             img {
                 height: 100%; // Make the image take up the full height of the button
@@ -848,10 +907,13 @@ footer{
             padding: 0; // Remove padding
             border: none; // Remove border
             background: none; // Remove background
+            margin-top: -5px;
+
+            
 
             img {
-                height: 100%; // Make the image take up the full height of the button
-                width: 100%; // Make the image take up the full width of the button
+                height: 45px; // Make the image take up the full height of the button
+                width: 45px; // Make the image take up the full width of the button
                 object-fit: cover; // Make the image cover the full area of the button
             }
         }
@@ -863,6 +925,9 @@ footer{
         margin-top: 10px;
         margin-bottom: 20px;
         padding: 0;
+
+        z-index: 2;
+        position: relative;
     }
 
     
