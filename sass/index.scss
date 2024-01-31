@@ -142,7 +142,7 @@ nav{
           
         @keyframes outer-left {
             from {
-                transform: translateX(150%);
+                transform: translateX(160%);
             }
             to {
                 transform: none;
@@ -151,7 +151,7 @@ nav{
 
         @keyframes outer-left-button {
            from {
-               transform: translateX(225%);
+               transform: translateX(190%);
            }
            to {
                transform: none;
@@ -206,9 +206,7 @@ nav{
               
          }
 
-         button.start-animation {
-        animation: text-clip 2s ease-out, outer-left-button 2s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-        }
+         button.start-animation { animation: text-clip 2s ease-out, outer-left-button 2s 1s cubic-bezier(0.5, 0, 0.1, 1) both; }
 
          @keyframes swing {
             15% {
@@ -645,16 +643,24 @@ background-color: $first;
                 text-align: center;
                 align-self: flex-start;
                 margin-right: 20px;
-                padding: 4px 6px;
+                padding: 5px 7px;
+                border-radius: 3px;
                 
                 background-color: grey;
                 list-style-type: none; // Add this
 
+                &.show-all{
+                    background-color: rgb(63, 62, 62);
+                }
+
 
                 &:hover{
-                    background-color: rgb(94, 93, 93);
+                    background-color: rgb(92, 92, 92);
+                    color:  $fourth;
+
                     cursor: pointer;
                 }
+                
             }
 
         }
@@ -938,4 +944,180 @@ footer{
     
     
 }
+
+
+
+// media queries
+
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
+
+@media (min-width:1700px) {
+    
+    body{
+        #ball-container{
+            height: 900px;
+        }
+    }
+
+    #nav{
+        ul{
+            a{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+    #home{
+        height: 900px;
+
+        .container1{
+            font-size: 55px;
+            margin: 180px 220px;
+
+            @keyframes outer-left {
+                from {
+                    transform: translateX(200%);
+                }
+                to {
+                    transform: none;
+                }
+            }
+
+            @keyframes outer-left-button {
+                from {
+                    transform: translateX(240%);
+                }
+                to {
+                    transform: none;
+                }
+            }
+
+            h1{
+                font-size: 75px;
+            }
+
+            button{
+                font-size: 25px;
+                height: 58px;
+                width: 400px;
+            }
+        }
+
+        .container2{
+            margin-top: 450px;
+        }
+    }
+
+    #about{
+        height: 800px;
+
+        .section1{
+            h2{
+                font-size: 70px;
+            }
+
+            p{
+                font-size: 25px;
+            }
+
+            button{
+                font-size: 30px;
+                height: 58px;
+                width: 430px;
+            }
+        }
+
+        .section2{
+            h2{
+                font-size: 70px;
+            }
+
+            .container1{
+                .skill{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    #projects{
+        .container1{
+            h1{
+                font-size: 60px;
+            }
+
+            p{
+                font-size: 25px;
+            }
+
+            ul{
+                li{
+                    font-size: 20px;
+                    padding: 7px 10px;
+                }
+            }
+        }
+
+        .container2{
+            .project{
+                .project-description{
+                    h3{
+                        font-size: 25px;
+                    }
+        
+                    h2{
+                        font-size: 35px;
+                    }
+        
+                    p{
+                        font-size: 25px;
+                    }
+        
+                    button{
+                        font-size: 20px;
+                        height: 40px;
+                        width: 160px;
+                    }
+                }
+            }
+        }
+    }
+
+    #contact-me{
+        h1{
+            font-size: 60px;
+        }
+
+        p{
+            font-size: 30px;
+        }
+
+        button{
+            font-size: 30px;
+            height: 45px;
+            width: 300px;
+        }
+    }
+
+    footer{
+        h1{
+            font-size: 25px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+    }
+
+
+}
+
+@media (min-width: 1400px){
+    
+}
+
 
