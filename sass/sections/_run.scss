@@ -1,3 +1,6 @@
+@use 'sass:math';
+
+
 #run{
 
     height: 50px;
@@ -21,7 +24,7 @@
             
         
                 $cycle:0.7;
-                $halfCycle: $cycle/2;
+                $halfCycle: math.div($cycle, 2);
                 $timming : linear;
                 body{background:#123752; height:100%;}
                 #robot{

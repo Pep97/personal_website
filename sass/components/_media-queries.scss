@@ -6,79 +6,290 @@
 // 1025px — 1200px: Desktops, large screens
 // 1201px and more —  Extra large screens, TV
 
-@media (max-width: 480px){
+// @media (max-width: 480px){
+//     body{
+//         #ball-container{
+//             height: 550px;
+//         }
+//     }
+
+//     nav{
+
+//         height: 65px;
+
+//         img{
+//             height: 50px;
+//             width: 80px;
+//             margin: 7px 5px;
+//         }
+
+        
+//     }
+
+
+//     #home {
+//         height: 1200px;
+
+//         .section1 , .section2{
+//             flex-shrink: 50%;
+//             z-index: 2;
+//             flex-direction: column; // Add this line
+
+            
+//         }
+
+//         .container1{
+//             font-size: 20px;
+//             margin: 70px 50px;
+
+            
+
+//             @keyframes outer-left {
+//                 from {
+//                     transform: translateX(120%);
+//                 }
+//                 to {
+//                     transform: none;
+//                 }
+//             }
+
+//             @keyframes outer-left-button {
+//                 from {
+//                     transform: translateX(120%);
+//                 }
+//                 to {
+//                     transform: none;
+//                 }
+//             }
+
+//             h1{
+//                 font-size: 60px;
+//                 margin-bottom: 25px;
+//             }
+
+//             button{
+//                 margin-top: 30px;
+//                 font-size: 23px;
+//                 height: 50px;
+//                 width: 380px;
+//             }
+//         }
+
+//         .container2{
+//             margin: 400px 50px 0px;
+
+//             img{
+//                 position: absolute;
+//                 min-width: 750px;
+//                 height: 750px;
+                
+//             }
+//         }
+//     }
+
+
+//     #about {
+//         height: 750px;
+
+//         .section1 , .section2{
+//             flex-basis: 50%;
+//             margin: 20px 55px;
+            
+            
+//         }
+
+//         .section1{
+//             h2{
+//                 font-size: 55px;
+//             }
+
+//             p{
+//                 font-size: 20px;
+//             }
+
+//             button{
+//                 font-size: 23px;
+//                 height: 50px;
+//                 width: 400px;
+//                 margin-top: 30px;
+//             }
+//         }
+
+//         .section2{
+//             h2{
+//                 font-size: 55px;
+//             }
+
+//             .container1{
+//                 .skill{
+//                     font-size: 19px;
+
+//                     img{
+//                         width: 85px;
+//                         height: 85px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     #projects {
+//         .container1{
+//             h1{
+//                 font-size: 50px;
+//             }
+
+//             p{
+//                 font-size: 21px;
+//             }
+
+//             ul{
+//                 li{
+//                     font-size: 16px;
+//                     padding: 5px 8px;
+//                 }
+//             }
+//         }
+
+//         .container2{
+//             .project{
+//                 .project-description{
+//                     h3{
+//                         font-size: 22px;
+//                     }
+        
+//                     h2{
+//                         font-size: 27px;
+//                     }
+        
+//                     p{
+//                         font-size: 20px;
+//                     }
+        
+//                     button{
+//                         font-size: 18px;
+//                         height: 35px;
+//                         width: 170px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     #contact-me {
+//         height: 380px;
+//         h1{
+//             font-size: 55px;
+//             margin-top: 25px;
+//             margin-bottom: 10px;
+//         }
+
+//         p{
+//             font-size: 26px;
+//         }
+
+//         button{
+//             margin-top: 70px;
+//             font-size: 23px;
+//             height: 40px;
+//             width: 350px;
+
+//         }
+//     }
+
+//     footer {
+//         h1{
+//             font-size: 18px;
+//         }
+
+//         p{
+//             font-size: 14px;
+//         }
+
+//         .container-buttons{
+//             .button-linkedin {
+//                 height: 38px;
+//                 width: 38px;
+//             }
+
+//             .button-github {
+//                 height: 38px;
+//                 width: 38px;
+//             }
+//         }
+//     }
+// }
+
+@media (max-width: 433px){
     body{
+
+
+        
         #ball-container{
-            height: 550px;
+
+            height: 800px;
         }
     }
 
     nav{
 
-        height: 9%;
+        height: 60px;
 
         img{
-            height: 100px;
-            width: 140px;
-            margin: 7px 35px;
+            height: 45px;
+            width: 70px;
+            margin: 7px 5px;
+        }
+        
+        a, ul, li{
+
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
         }
 
-        
+
     }
 
-
     #home {
-        height: 1200px;
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
 
-        .section1 , .section2{
-            flex-shrink: 50%;
-            z-index: 2;
-            
-        }
+        
 
         .container1{
-            font-size: 20px;
-            margin: 70px 50px;
-
+            font-size: 35px;
+            margin: 85px 100px;
             
+            justify-content: center;
+            align-items: center;
 
-            @keyframes outer-left {
-                from {
-                    transform: translateX(120%);
-                }
-                to {
-                    transform: none;
-                }
-            }
 
-            @keyframes outer-left-button {
-                from {
-                    transform: translateX(120%);
-                }
-                to {
-                    transform: none;
-                }
-            }
+
 
             h1{
-                font-size: 60px;
-                margin-bottom: 25px;
+                font-size: 40px;
+                margin-bottom: 15px;
             }
 
             button{
-                margin-top: 30px;
-                font-size: 23px;
-                height: 50px;
-                width: 380px;
+                margin-top: 20px;
+                font-size: 12px;
+                height: 35px;
+                width: 210px;
             }
         }
 
         .container2{
-            margin: 400px 50px 0px;
+            margin: 40px 50px 0px;
 
             img{
-                min-width: 750px;
-                height: 750px;
+                margin-top: 250px;
+                width: 100%;
+                min-width: 250px;
+                max-width: 470px;
+                height: auto;
                 
             }
         }
@@ -86,7 +297,9 @@
 
 
     #about {
-        height: 750px;
+        height: 1650px;
+        display: flex;
+        flex-direction: column;
 
         .section1 , .section2{
             flex-basis: 50%;
@@ -97,7 +310,8 @@
 
         .section1{
             h2{
-                font-size: 55px;
+                margin-top: 60px;
+                font-size: 45px;
             }
 
             p{
@@ -107,23 +321,32 @@
             button{
                 font-size: 23px;
                 height: 50px;
-                width: 400px;
-                margin-top: 30px;
+                width: 240px;
+                margin-top: 40px;
             }
         }
 
         .section2{
             h2{
-                font-size: 55px;
+                font-size: 50px;
             }
 
             .container1{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); // Changed from 3 to 2
+                grid-template-rows: repeat(3, 1fr);
+                column-gap: 0px;
+                gap: 20px;
+                
                 .skill{
-                    font-size: 19px;
+                    font-size: 20px;
+                    
 
                     img{
-                        width: 85px;
-                        height: 85px;
+                        margin-bottom: 10px;
+                        width: 65px;
+                        height: 65px;
+                        
                     }
                 }
             }
@@ -132,62 +355,1561 @@
 
     #projects {
         .container1{
+
+            
             h1{
-                font-size: 50px;
+                font-size: 45px;
             }
 
             p{
-                font-size: 21px;
+                font-size: 22px;
+            }
+
+            small{
+                font-size: 19px;
             }
 
             ul{
+
                 li{
-                    font-size: 16px;
+                    font-size: 18px;
                     padding: 5px 8px;
+                    margin-top: 8px;
                 }
             }
         }
 
         .container2{
+            margin-bottom: 30px;
             .project{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
                 .project-description{
+
+                    width: 100%;
+                    
+
                     h3{
-                        font-size: 22px;
+                        font-size: 26px;
+                        
                     }
         
                     h2{
-                        font-size: 27px;
+                        font-size: 30px;
+                        margin-top: 15px;
                     }
         
                     p{
-                        font-size: 20px;
+                        font-size: 22px;
                     }
         
                     button{
-                        font-size: 18px;
-                        height: 35px;
-                        width: 170px;
+                        margin-top: 12px;
+                        font-size: 20px;
+                        height: 32px;
+                        width: 240px;
+                        margin-left: 15px;
+                        
                     }
+                }
+
+                .project-image{
+                    margin-top: 30px;
+                    img{
+                        width: 90%;
+                        height: auto;
+                    }
+                
                 }
             }
         }
     }
 
     #contact-me {
-        height: 380px;
+        height: 400px;
         h1{
+            font-size: 50px;
+            margin-top: 25px;
+            margin-bottom: 0px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        button{
+            margin-top: 45px;
+            font-size: 20px;
+            height: 40px;
+            width: 240px;
+            margin-left: 15px;
+
+        }
+    }
+
+    footer {
+        h1{
+            font-size: 20px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        .container-buttons{
+            .button-linkedin {
+                height: 40px;
+                width: 40px;
+            }
+
+            .button-github {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 424px){
+    body{
+
+
+        
+        #ball-container{
+
+            height: 800px;
+        }
+    }
+
+    nav{
+
+        height: 60px;
+
+        img{
+            height: 45px;
+            width: 70px;
+            margin: 7px 5px;
+        }
+        
+        a, ul, li{
+
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+
+    }
+
+    #home {
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+
+        
+
+        .container1{
+            font-size: 35px;
+            margin: 85px 100px;
+            
+            justify-content: center;
+            align-items: center;
+
+
+
+
+            h1{
+                font-size: 40px;
+                margin-bottom: 15px;
+            }
+
+            button{
+                margin-top: 20px;
+                font-size: 12px;
+                height: 35px;
+                width: 210px;
+            }
+        }
+
+        .container2{
+            margin: 40px 50px 0px;
+
+            img{
+                margin-top: 250px;
+                width: 100%;
+                min-width: 250px;
+                max-width: 470px;
+                height: auto;
+                
+            }
+        }
+    }
+
+
+    #about {
+        height: 1650px;
+        display: flex;
+        flex-direction: column;
+
+        .section1 , .section2{
+            flex-basis: 50%;
+            margin: 20px 55px;
+            
+            
+        }
+
+        .section1{
+            h2{
+                margin-top: 60px;
+                font-size: 45px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+            button{
+                font-size: 23px;
+                height: 50px;
+                width: 240px;
+                margin-top: 40px;
+            }
+        }
+
+        .section2{
+            h2{
+                font-size: 50px;
+            }
+
+            .container1{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); // Changed from 3 to 2
+                grid-template-rows: repeat(3, 1fr);
+                column-gap: 0px;
+                gap: 20px;
+                
+                .skill{
+                    font-size: 20px;
+                    
+
+                    img{
+                        margin-bottom: 10px;
+                        width: 65px;
+                        height: 65px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    #projects {
+        .container1{
+
+            
+            h1{
+                font-size: 45px;
+            }
+
+            p{
+                font-size: 22px;
+            }
+
+            small{
+                font-size: 19px;
+            }
+
+            ul{
+
+                li{
+                    font-size: 18px;
+                    padding: 5px 8px;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .container2{
+            margin-bottom: 30px;
+            .project{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .project-description{
+
+                    width: 100%;
+                    
+
+                    h3{
+                        font-size: 26px;
+                        
+                    }
+        
+                    h2{
+                        font-size: 30px;
+                        margin-top: 15px;
+                    }
+        
+                    p{
+                        font-size: 22px;
+                    }
+        
+                    button{
+                        margin-top: 12px;
+                        font-size: 20px;
+                        height: 32px;
+                        width: 240px;
+                        margin-left: 15px;
+                        
+                    }
+                }
+
+                .project-image{
+                    margin-top: 30px;
+                    img{
+                        width: 90%;
+                        height: auto;
+                    }
+                
+                }
+            }
+        }
+    }
+
+    #contact-me {
+        height: 400px;
+        h1{
+            font-size: 50px;
+            margin-top: 25px;
+            margin-bottom: 0px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        button{
+            margin-top: 45px;
+            font-size: 20px;
+            height: 40px;
+            width: 240px;
+            margin-left: 15px;
+
+        }
+    }
+
+    footer {
+        h1{
+            font-size: 20px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        .container-buttons{
+            .button-linkedin {
+                height: 40px;
+                width: 40px;
+            }
+
+            .button-github {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 425px){
+    body{
+
+
+        
+        #ball-container{
+
+            height: 800px;
+        }
+    }
+
+    nav{
+
+        height: 60px;
+
+        img{
+            height: 45px;
+            width: 70px;
+            margin: 7px 5px;
+        }
+        
+        a, ul, li{
+
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+
+    }
+
+    #home {
+        height: 1070px;
+        display: flex;
+        flex-direction: column;
+
+        
+
+        .container1{
+            font-size: 40px;
+            margin: 85px 100px;
+            
+            justify-content: center;
+            align-items: center;
+
+
+
+
+            h1{
+                font-size: 45px;
+                margin-bottom: 15px;
+            }
+
+            button{
+                margin-top: 20px;
+                font-size: 13px;
+                height: 35px;
+                width: 230px;
+            }
+        }
+
+        .container2{
+            margin: 40px 50px 0px;
+
+            img{
+                margin-top: 250px;
+                width: 100%;
+                min-width: 360px;
+                max-width: 470px;
+                height: auto;
+                
+            }
+        }
+    }
+
+
+    #about {
+        height: 1380px;
+        display: flex;
+        flex-direction: column;
+
+        .section1 , .section2{
+            flex-basis: 50%;
+            margin: 20px 55px;
+            
+            
+        }
+
+        .section1{
+            h2{
+                margin-top: 60px;
+                font-size: 50px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+            button{
+                font-size: 23px;
+                height: 50px;
+                width: 240px;
+                margin-top: 40px;
+            }
+        }
+
+        .section2{
+            h2{
+                font-size: 50px;
+            }
+
+            .container1{
+                gap: 20px;
+                .skill{
+                    font-size: 18px;
+                    
+
+                    img{
+                        margin-bottom: 10px;
+                        width: 65px;
+                        height: 65px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    #projects {
+        .container1{
+
+            
+            h1{
+                font-size: 50px;
+            }
+
+            p{
+                font-size: 22px;
+            }
+
+            small{
+                font-size: 19px;
+            }
+
+            ul{
+
+                li{
+                    font-size: 20px;
+                    padding: 5px 8px;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .container2{
+            margin-bottom: 30px;
+            .project{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .project-description{
+
+                    width: 100%;
+                    
+
+                    h3{
+                        font-size: 26px;
+                        
+                    }
+        
+                    h2{
+                        font-size: 30px;
+                        margin-top: 15px;
+                    }
+        
+                    p{
+                        font-size: 22px;
+                    }
+        
+                    button{
+                        margin-top: 12px;
+                        font-size: 20px;
+                        height: 32px;
+                        width: 240px;
+                        margin-left: 15px;
+                        
+                    }
+                }
+
+                .project-image{
+                    margin-top: 30px;
+                    img{
+                        width: 90%;
+                        height: auto;
+                    }
+                
+                }
+            }
+        }
+    }
+
+    #contact-me {
+        height: 400px;
+        h1{
+            font-size: 50px;
+            margin-top: 25px;
+            margin-bottom: 0px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        button{
+            margin-top: 45px;
+            font-size: 20px;
+            height: 40px;
+            width: 240px;
+            margin-left: 15px;
+
+        }
+    }
+
+    footer {
+        h1{
+            font-size: 20px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        .container-buttons{
+            .button-linkedin {
+                height: 40px;
+                width: 40px;
+            }
+
+            .button-github {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 470px){
+    body{
+
+
+        
+        #ball-container{
+
+            height: 800px;
+        }
+    }
+
+    nav{
+
+        height: 60px;
+
+        img{
+            height: 45px;
+            width: 70px;
+            margin: 7px 5px;
+        }
+        
+        a, ul, li{
+
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+
+    }
+
+    #home {
+        height: 1070px;
+        display: flex;
+        flex-direction: column;
+
+        
+
+        .container1{
+            font-size: 40px;
+            margin: 105px 100px;
+            
+            justify-content: center;
+            align-items: center;
+
+
+
+
+            h1{
+                font-size: 45px;
+                margin-bottom: 30px;
+            }
+
+            button{
+                margin-top: 35px;
+                font-size: 13px;
+                height: 35px;
+                width: 290px;
+            }
+        }
+
+        .container2{
+            margin: 40px 50px 0px;
+
+            img{
+                margin-top: 250px;
+                width: 100%;
+                min-width: 360px;
+                max-width: 470px;
+                height: auto;
+                
+            }
+        }
+    }
+
+
+    #about {
+        height: 1380px;
+        display: flex;
+        flex-direction: column;
+
+        .section1 , .section2{
+            flex-basis: 50%;
+            margin: 20px 55px;
+            
+            
+        }
+
+        .section1{
+            h2{
+                margin-top: 60px;
+                font-size: 50px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+            button{
+                font-size: 23px;
+                height: 50px;
+                width: 240px;
+                margin-top: 40px;
+            }
+        }
+
+        .section2{
+            h2{
+                font-size: 50px;
+            }
+
+            .container1{
+                gap: 20px;
+                .skill{
+                    font-size: 18px;
+                    
+
+                    img{
+                        margin-bottom: 10px;
+                        width: 65px;
+                        height: 65px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    #projects {
+        .container1{
+
+            
+            h1{
+                font-size: 50px;
+            }
+
+            p{
+                font-size: 22px;
+            }
+
+            small{
+                font-size: 19px;
+            }
+
+            ul{
+
+                li{
+                    font-size: 20px;
+                    padding: 5px 8px;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .container2{
+            margin-bottom: 30px;
+            .project{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .project-description{
+
+                    width: 100%;
+                    
+
+                    h3{
+                        font-size: 26px;
+                        
+                    }
+        
+                    h2{
+                        font-size: 30px;
+                        margin-top: 15px;
+                    }
+        
+                    p{
+                        font-size: 22px;
+                    }
+        
+                    button{
+                        margin-top: 12px;
+                        font-size: 20px;
+                        height: 32px;
+                        width: 240px;
+                        margin-left: 15px;
+                        
+                    }
+                }
+
+                .project-image{
+                    margin-top: 30px;
+                    img{
+                        width: 90%;
+                        height: auto;
+                    }
+                
+                }
+            }
+        }
+    }
+
+    #contact-me {
+        height: 400px;
+        h1{
+            font-size: 50px;
+            margin-top: 25px;
+            margin-bottom: 0px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        button{
+            margin-top: 45px;
+            font-size: 20px;
+            height: 40px;
+            width: 240px;
+            margin-left: 15px;
+
+        }
+    }
+
+    footer {
+        h1{
+            font-size: 20px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        .container-buttons{
+            .button-linkedin {
+                height: 40px;
+                width: 40px;
+            }
+
+            .button-github {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 550px){
+    body{
+
+
+        
+        #ball-container{
+
+            height: 800px;
+        }
+    }
+
+    nav{
+
+        height: 60px;
+
+        img{
+            height: 45px;
+            width: 70px;
+            margin: 7px 5px;
+        }
+        
+        a, ul, li{
+
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+
+    }
+
+    #home {
+        height: 1170px;
+        display: flex;
+        flex-direction: column;
+
+        
+
+        .container1{
+            font-size: 50px;
+            margin: 140px 100px;
+            
+            justify-content: center;
+            align-items: center;
+
+
+
+
+            h1{
+                font-size: 45px;
+                margin-bottom: 30px;
+            }
+
+            button{
+                margin-top: 35px;
+                font-size: 15px;
+                height: 35px;
+                width: 230px;
+            }
+        }
+
+        .container2{
+            margin: 40px 50px 0px;
+
+            img{
+                margin-top: 280px;
+                width: 100%;
+                min-width: 360px;
+                max-width: 470px;
+                height: auto;
+                
+            }
+        }
+    }
+
+
+    #about {
+        height: 1280px;
+        display: flex;
+        flex-direction: column;
+
+        .section1 , .section2{
+            flex-basis: 50%;
+            margin: 20px 55px;
+            
+            
+        }
+
+        .section1{
+            h2{
+                margin-top: 60px;
+                font-size: 50px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+            button{
+                font-size: 23px;
+                height: 50px;
+                width: 240px;
+                margin-top: 40px;
+            }
+        }
+
+        .section2{
+            h2{
+                font-size: 50px;
+            }
+
+            .container1{
+                gap: 20px;
+                .skill{
+                    font-size: 18px;
+                    
+
+                    img{
+                        margin-bottom: 10px;
+                        width: 65px;
+                        height: 65px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    #projects {
+        .container1{
+
+            
+            h1{
+                font-size: 50px;
+            }
+
+            p{
+                font-size: 22px;
+            }
+
+            small{
+                font-size: 19px;
+            }
+
+            ul{
+
+                li{
+                    font-size: 20px;
+                    padding: 5px 8px;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .container2{
+            margin-bottom: 30px;
+            .project{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .project-description{
+
+                    width: 100%;
+                    
+
+                    h3{
+                        font-size: 26px;
+                        
+                    }
+        
+                    h2{
+                        font-size: 30px;
+                        margin-top: 15px;
+                    }
+        
+                    p{
+                        font-size: 22px;
+                    }
+        
+                    button{
+                        margin-top: 12px;
+                        font-size: 20px;
+                        height: 32px;
+                        width: 240px;
+                        margin-left: 15px;
+                        
+                    }
+                }
+
+                .project-image{
+                    margin-top: 30px;
+                    img{
+                        width: 90%;
+                        height: auto;
+                    }
+                
+                }
+            }
+        }
+    }
+
+    #contact-me {
+        height: 400px;
+        h1{
+            font-size: 50px;
+            margin-top: 25px;
+            margin-bottom: 0px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        button{
+            margin-top: 45px;
+            font-size: 20px;
+            height: 40px;
+            width: 240px;
+            margin-left: 15px;
+
+        }
+    }
+
+    footer {
+        h1{
+            font-size: 20px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        .container-buttons{
+            .button-linkedin {
+                height: 40px;
+                width: 40px;
+            }
+
+            .button-github {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 630px){
+    body{
+
+
+        
+        #ball-container{
+
+            height: 800px;
+        }
+    }
+
+    nav{
+
+        height: 60px;
+
+        img{
+            height: 45px;
+            width: 70px;
+            margin: 7px 5px;
+        }
+        
+        a, ul, li{
+
+            padding: 0;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+
+    }
+
+    #home {
+        height: 1170px;
+        display: flex;
+        flex-direction: column;
+
+        
+
+        .container1{
+            font-size: 50px;
+            margin: 140px 130px;
+            
+            justify-content: center;
+            align-items: center;
+
+
+
+
+            h1{
+                font-size: 55px;
+                margin-bottom: 30px;
+            }
+
+            button{
+                margin-top: 35px;
+                font-size: 15px;
+                height: 35px;
+                width: 230px;
+            }
+        }
+
+        .container2{
+            margin: 40px 50px 0px;
+
+            img{
+                margin-top: 280px;
+                width: 100%;
+                min-width: 360px;
+                max-width: 470px;
+                height: auto;
+                
+            }
+        }
+    }
+
+
+    #about {
+        height: 1280px;
+        display: flex;
+        flex-direction: column;
+
+        .section1 , .section2{
+            flex-basis: 50%;
+            margin: 20px 55px;
+            
+            
+        }
+
+        .section1{
+            h2{
+                margin-top: 60px;
+                font-size: 50px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+            button{
+                font-size: 23px;
+                height: 50px;
+                width: 240px;
+                margin-top: 40px;
+            }
+        }
+
+        .section2{
+            h2{
+                font-size: 50px;
+            }
+
+            .container1{
+                gap: 20px;
+                .skill{
+                    font-size: 18px;
+                    
+
+                    img{
+                        margin-bottom: 10px;
+                        width: 65px;
+                        height: 65px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    #projects {
+        .container1{
+
+            
+            h1{
+                font-size: 50px;
+            }
+
+            p{
+                font-size: 22px;
+            }
+
+            small{
+                font-size: 19px;
+            }
+
+            ul{
+
+                li{
+                    font-size: 20px;
+                    padding: 5px 8px;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .container2{
+            margin-bottom: 30px;
+            .project{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .project-description{
+
+                    width: 100%;
+                    
+
+                    h3{
+                        font-size: 26px;
+                        
+                    }
+        
+                    h2{
+                        font-size: 30px;
+                        margin-top: 15px;
+                    }
+        
+                    p{
+                        font-size: 22px;
+                    }
+        
+                    button{
+                        margin-top: 12px;
+                        font-size: 20px;
+                        height: 32px;
+                        width: 240px;
+                        margin-left: 15px;
+                        
+                    }
+                }
+
+                .project-image{
+                    margin-top: 30px;
+                    img{
+                        width: 90%;
+                        height: auto;
+                    }
+                
+                }
+            }
+        }
+    }
+
+    #contact-me {
+        height: 400px;
+        h1{
+            font-size: 50px;
+            margin-top: 25px;
+            margin-bottom: 0px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+        button{
+            margin-top: 45px;
+            font-size: 20px;
+            height: 40px;
+            width: 240px;
+            margin-left: 15px;
+
+        }
+    }
+
+    footer {
+        h1{
+            font-size: 20px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        .container-buttons{
+            .button-linkedin {
+                height: 40px;
+                width: 40px;
+            }
+
+            .button-github {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}
+
+// add humburger menu in 425px and the new one
+// adjust measure between 425px and 768px
+// add media between 425px and 768px
+
+@media (min-width: 768px){
+    body{
+
+
+        
+        #ball-container{
+
+            height: 900px;
+        }
+    }
+
+    // #nav{
+        
+
+
+    // }
+
+    #home {
+        height: 1500px;
+        display: flex;
+        flex-direction: column;
+        
+
+        .container1{
             font-size: 55px;
+            margin: 235px 30px;
+            justify-content: center;
+            align-items: center;
+
+
+
+
+            h1{
+                font-size: 55px;
+                margin-bottom: 50px;
+            }
+
+            button{
+                margin-top: 60px;
+                font-size: 23px;
+                height: 50px;
+                width: 370px;
+            }
+        }
+
+        .container2{
+            margin: 100px 50px 0px;
+
+            img{
+                margin-top: 300px;
+                width: 100%;
+                min-width: 380px;
+                max-width: 470px;
+                height: auto;
+                
+            }
+        }
+    }
+
+
+    #about {
+        height: 1700px;
+        display: flex;
+        flex-direction: column;
+
+        .section1 , .section2{
+            flex-basis: 50%;
+            margin: 20px 55px;
+            
+            
+        }
+
+        .section1{
+            h2{
+                margin-top: 90px;
+                font-size: 70px;
+            }
+
+            p{
+                font-size: 25px;
+            }
+
+            button{
+                font-size: 23px;
+                height: 50px;
+                width: 350px;
+                margin-top: 40px;
+            }
+        }
+
+        .section2{
+            h2{
+                font-size: 70px;
+            }
+
+            .container1{
+                gap: 35px;
+                .skill{
+                    font-size: 25px;
+                    
+
+                    img{
+                        width: 100px;
+                        height: 100px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    #projects {
+        .container1{
+
+            
+            h1{
+                font-size: 70px;
+            }
+
+            p{
+                font-size: 25px;
+            }
+
+            small{
+                font-size: 20px;
+            }
+
+            ul{
+
+                li{
+                    font-size: 22px;
+                    padding: 5px 8px;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .container2{
+            .project{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .project-description{
+
+                    h3{
+                        font-size: 29px;
+                        
+                    }
+        
+                    h2{
+                        font-size: 35px;
+                        margin-top: 15px;
+                    }
+        
+                    p{
+                        font-size: 24px;
+                    }
+        
+                    button{
+                        margin-top: 12px;
+                        font-size: 22px;
+                        height: 35px;
+                        width: 230px;
+                    }
+                }
+
+                .project-image{
+                    margin-top: 30px;
+                    img{
+                        width: 90%;
+                        height: auto;
+                    }
+                
+                }
+            }
+        }
+    }
+
+    #contact-me {
+        height: 430px;
+        h1{
+            font-size: 70px;
             margin-top: 25px;
             margin-bottom: 10px;
         }
 
         p{
-            font-size: 26px;
+            font-size: 28px;
         }
 
         button{
-            margin-top: 70px;
-            font-size: 23px;
+            margin-top: 60px;
+            font-size: 25px;
             height: 40px;
             width: 350px;
 
@@ -196,22 +1918,22 @@
 
     footer {
         h1{
-            font-size: 18px;
+            font-size: 22px;
         }
 
         p{
-            font-size: 14px;
+            font-size: 18px;
         }
 
         .container-buttons{
             .button-linkedin {
-                height: 38px;
-                width: 38px;
+                height: 45px;
+                width: 45px;
             }
 
             .button-github {
-                height: 38px;
-                width: 38px;
+                height: 45px;
+                width: 45px;
             }
         }
     }
@@ -230,6 +1952,8 @@
 
     #home {
         height: 800px;
+        flex-direction: row;
+        
 
         .container1{
             font-size: 50px;
@@ -270,9 +1994,12 @@
             margin: 400px 50px 0px;
 
             img{
+                margin-top: 0;
                 width: 100%;
+                min-width: 380px;
                 max-width: 470px;
                 height: auto;
+                
                 
             }
         }
@@ -281,6 +2008,8 @@
 
     #about {
         height: 750px;
+        flex-direction: row;
+
 
         .section1 , .section2{
             flex-basis: 50%;
@@ -292,6 +2021,8 @@
         .section1{
             h2{
                 font-size: 55px;
+                margin-top: 45px;
+
             }
 
             p{
@@ -312,8 +2043,11 @@
             }
 
             .container1{
+                gap: 15px;
                 .skill{
                     font-size: 19px;
+                    margin-bottom: 8px;
+
 
                     img{
                         width: 85px;
@@ -344,6 +2078,8 @@
 
         .container2{
             .project{
+                flex-direction: row;
+                text-align: left;
                 .project-description{
                     h3{
                         font-size: 22px;
@@ -356,15 +2092,27 @@
                     }
         
                     p{
-                        font-size: 20px;
+                        font-size: 19px;
                     }
         
                     button{
-                        margin-top: 12px;
+                        margin-top: 10px;
                         font-size: 18px;
                         height: 35px;
                         width: 170px;
                     }
+                }
+
+                .project-image{
+                    flex-basis: 40%;
+                    margin: 0;
+                    padding: 0;
+
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                
                 }
             }
         }
