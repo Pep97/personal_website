@@ -1,0 +1,76 @@
+footer{
+    background-color: $first;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $third;
+    padding-top: 35px;
+    text-shadow: 1px 0px 0 black;
+
+    h1{
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+        position: relative;
+    }
+
+    .container-buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0;
+        z-index: 2;
+        position: relative;
+
+        .button-linkedin {
+            height: 40px;
+            width: 40px;
+            padding: 0; // Remove padding
+            border: none; // Remove border
+            background: none; // Remove background
+            margin-right: 10px;
+
+            img {
+                height: 100%; // Make the image take up the full height of the button
+                width: 100%; // Make the image take up the full width of the button
+                object-fit: cover; // Make the image cover the full area of the button
+            }
+        }
+
+        .button-github {
+            height: 40px;
+            width: 40px;
+            padding: 0; // Remove padding
+            border: none; // Remove border
+            background: none; // Remove background
+            margin-top: -5px;
+
+            
+
+            img {
+                height: 45px; // Make the image take up the full height of the button
+                width: 45px; // Make the image take up the full width of the button
+                object-fit: cover; // Make the image cover the full area of the button
+            }
+        }
+    }
+
+    p{
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 0;
+
+        z-index: 2;
+        position: relative;
+    }
+
+    
+    
+    
+}

@@ -1,0 +1,29 @@
+// SASS code
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+    #ball-container{
+        overflow: hidden;
+        width: 98vw;
+        height: 650px;
+        position: fixed;
+        z-index: 1; // Add this line
+
+    
+        .ball {
+            position: absolute;
+            border-radius: 100%;
+            opacity: 0.7;
+
+
+          }
+    }
+}

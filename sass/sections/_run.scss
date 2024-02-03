@@ -1,0 +1,124 @@
+#run{
+
+    height: 50px;
+    background-color: $first;
+    
+        .runner-line{
+            position: relative;
+                   bottom: 420px;
+    
+            @keyframes runAnimation {
+                0% { left: 0; }
+                100% { left: 92%; }
+            }
+        
+            .runner{
+                position: absolute;
+                transform: scale(0.2);
+                animation: runAnimation 6s linear infinite;
+    
+                
+            
+        
+                $cycle:0.7;
+                $halfCycle: $cycle/2;
+                $timming : linear;
+                body{background:#123752; height:100%;}
+                #robot{
+                    position:relative;
+                    height:78vh;width:20vh;
+                    margin:0 auto;	
+                    animation: robot $cycle+s infinite ease-in-out;
+                z-index:2;
+                div{
+                    position:absolute;
+                    transform-origin: 50% 0;
+                }
+                .r div{background:#29516D;}
+                .l div{background:#326384;}
+                .leg.r, .arm.l{animation:trans $cycle+s $halfCycle+s infinite $timming;}
+                .leg.l, .arm.r{animation:trans $cycle+s infinite $timming;}
+                .head{
+                    top:10vh; left:5vh;
+                    width:9vh; height:10vh;
+                    margin:0 auto;
+                    transform-origin:20% 80%;	
+                    animation: head $cycle+s infinite $timming;
+                    background:#326384;
+                }
+                .arm{
+                    left:5vh; top:20.5vh;
+                    width:8vh; height:5.5vh;
+                    div{
+                    top:100%; left:0;
+                    width:100%; height:10vh;
+                    box-sizing:border-box;
+                    transform:rotate(5deg);
+                    animation: arms1 $cycle+s infinite $timming;
+                    div{animation: arms2 $cycle+s infinite $timming;}
+                    }
+                    &.l div{animation-delay:-$halfCycle+s;}
+                }
+                .leg{
+                    top:45vh;left:5vh;
+                    width:8vh; height:4vh;
+                    div{
+                    width:100%; height:15vh;
+                    top:100%;	
+                    animation: legs1 $cycle+s infinite $timming;
+                    div{ animation: legs2 $cycle+s infinite $timming;}
+                    }
+                    &.r div{animation-delay:-$halfCycle+s;}
+                }
+                }
+                .shadow{
+                position:relative;
+                    width:22vh; height:3vh;
+                    margin:0 auto;
+                    border-radius:50%;
+                    background:#05314f;
+                animation: shadow $cycle+s infinite $timming;
+                z-index:1;
+                }
+                /************************************************************************************/
+                @keyframes robot {
+                    0%,         50%,    100%  {transform: translateY(0vh) rotate(7deg);}
+                    15%,    65%  {transform: translateY(-4vh) rotate(5deg);}
+                }
+                @keyframes head {
+                    0%, 100% {transform: rotate(-5deg);}
+                    25%, 75% {transform: rotate(15deg);}
+                    50%      {transform: rotate(0deg);}
+                }
+                @keyframes trans {
+                    0%,100% {transform: translateX(0vh);}
+                    50%     {transform: translateX(3vh);}
+                }
+                @keyframes arms1 {
+                    0%, 100% {transform: rotate(50deg);}
+                    50%      {transform: rotate(-70deg);}
+                }
+                @keyframes arms2 {
+                    0%, 100% {transform: rotate(-5deg);}
+                    50%      {transform: rotate(-100deg);}
+                }
+                @keyframes legs1 {
+                    0%, 100% {transform: rotate(60deg);}
+                    40%      {transform: rotate(-90deg);}
+                }
+                @keyframes legs2 {
+                    0%, 100% {transform: rotate(2deg);}
+                    33%      {transform: rotate(150deg);}
+                    50%      {transform: rotate(0deg);}
+                }
+                @keyframes shadow {
+                    0%,    50%,    100%  {transform: scale(1.5);}
+                    25%,    75%       {transform: scale(0.98);}
+                }
+                
+                a{color:#326384;font-family:sans-serif;text-transform:uppercase;display:block;text-align:center;margin:5%;font-weight:bold;}
+                }
+    
+        }
+    
+    }

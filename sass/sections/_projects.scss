@@ -1,0 +1,186 @@
+#projects{
+
+    background-color: $first;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $third;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    margin: 0;
+    
+    text-shadow: 1px 0px 0 black;
+
+
+    .container1, .container2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        z-index: 1;
+    }
+    
+    .container1{
+
+        padding: 0;
+        width: 90%;
+        z-index: 2;
+        background-color: $first;
+        // background-color: rgba(128, 128, 128, 0.1); // 50% opaque grey
+
+        
+
+        h1{
+            font-size: 50px;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 25px;
+            margin-bottom: 0;
+            padding: 0;
+        }
+        small {
+            align-self: flex-start;
+            font-size: 17px;
+            color: $second;
+            margin-top: 15px;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-self: flex-start;
+            justify-content: flex-start;
+            padding: 0;
+
+            li{
+                text-align: center;
+                align-self: flex-start;
+                margin-right: 20px;
+                padding: 5px 7px;
+                border-radius: 3px;
+                
+                background-color: grey;
+                list-style-type: none; // Add this
+
+                &.show-all{
+                    background-color: rgb(63, 62, 62);
+                }
+
+
+                &:hover{
+                    background-color: rgb(92, 92, 92);
+                    color:  $fourth;
+
+                    cursor: pointer;
+                }
+                
+            }
+
+        }
+
+
+
+
+    }
+
+    .container2{
+        
+        width: 90%;
+        z-index: 2;
+        background-color: $first;
+        // background-color: rgba(128, 128, 128, 0.1); // 50% opaque grey
+
+
+        .project{
+
+            display: flex;
+            margin: 30px 0;
+
+            .project-description{
+                flex-basis: 65%;
+                margin-right: 40px;
+                
+        
+        
+                h3{
+                    font-size: 22px;
+                    font-weight: 400;
+                    margin: 10px 0;
+                    padding: 0;
+                    color: $second;
+                }
+        
+                h2{
+                    
+                    font-size: 30px;
+                    font-weight: 700;
+                    margin: 5px 0;
+                    padding: 0;
+                }
+        
+                p{
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin: 15px 0;
+                    padding: 0;
+                }
+        
+                button{
+                    align-items: center;
+                    appearance: none;
+                    background-color: $fourth;
+                    border: 0;
+                    border-radius: 6px;
+                    box-shadow: rgba(255, 255, 255, 0.4) 2px 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+                    cursor: pointer;
+                    display: inline-flex;
+                    font-family: "JetBrains Mono",monospace;
+                    height: 48px;
+                    width: 100px;
+                    justify-content: center;
+                    
+                    margin-right: 25px;
+                    
+                    
+                    &:hover {
+                        background-color: $third;
+                    }
+        
+                    a {
+                        text-decoration: none;
+                        color: $first;
+                        font-size: 23px;
+                        font-weight: bold;
+                        
+                    }
+                }
+            }
+        
+            .project-image{
+                flex-basis: 35%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+        
+                img{
+                    height: 300px;
+                    width: 400px;
+                }
+            }
+        }
+    
+
+    }
+
+
+}

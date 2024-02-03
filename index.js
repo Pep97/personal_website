@@ -20,6 +20,12 @@ forEach(function(a) {
         this.style.color = '';
     });
 });
+
+// activate the hamburger menu
+
+
+
+
     
 // ---------------------------------------------------------
 
@@ -87,9 +93,11 @@ function animateBalls(containerId, numBalls) {
 // media query for balls animation
 
 // Call the function immediately when the page loads
-if (window.innerWidth < 1700) {
+if (window.innerWidth < 1400) {
   animateBalls('#ball-container', 30);
-} else {
+} else if (window.innerWidth < 1700)  {
+  animateBalls('#ball-container', 50);
+}else {
   animateBalls('#ball-container', 60);
 }
 
