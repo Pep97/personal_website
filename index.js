@@ -6,7 +6,7 @@ document.querySelectorAll('.topnav__item a').
 forEach(function(a) {
     a.addEventListener('mouseenter', function() {
         this.parentNode.style.backgroundColor = '#EAD7BB';
-        this.parentNode.style.margin = '-2px 5px';
+        // this.parentNode.style.margin = '-2px 5px';
         this.parentNode.style.padding = '3px 0px';
         this.parentNode.style.borderRadius = '30px';
         this.style.color = '#113946';
@@ -25,10 +25,12 @@ forEach(function(a) {
 
 const btnOpen = document.querySelector('#btnOpen');
 const btnClose = document.querySelector('#btnClose');
-const media = window.matchMedia('(width < 40em)');
+const media = window.matchMedia('(max-width: 950px)'); //48em
 const topNavMenu = document.querySelector('.topnav__menu');
 const main = document.querySelector('main');
 const body = document.querySelector('body');
+const mobileView = document.querySelector('.mobile-view');
+const pcView = document.querySelector('.pc-view');
 
 function openMobileMenu() {
   btnOpen.setAttribute('aria-expanded', 'true');
@@ -54,12 +56,16 @@ function closeMobileMenu() {
 function setupTopNav(e) {
   if (e.matches) {
     // is mobile
-    console.log('is mobile');
+    // console.log('is mobile');
+    mobileView.style.display = 'block';
+    pcView.style.display = 'none';
     topNavMenu.setAttribute('inert', '');
     topNavMenu.style.transition = 'none';
   } else {
     // is tablet/desktop
-    console.log('is desktop');
+    // console.log('is desktop');
+    mobileView.style.display = 'none';
+    pcView.style.display = 'block';
     topNavMenu.removeAttribute('inert');
     closeMobileMenu();
   }
@@ -72,6 +78,31 @@ btnClose.addEventListener('click', closeMobileMenu);
 
 media.addEventListener('change', function (e) {
   setupTopNav(e);
+});
+
+// automatically close the mobile menu when a link is clicked
+
+
+document.querySelector('.topnav__link').addEventListener('click', function(event) {
+
+  const openButton = document.getElementById('btnOpen');
+
+  if (openButton.getAttribute('aria-expanded') === 'true' ) {
+    // Get the close button
+    const closeButton = document.querySelector('.topnav__close');
+  
+    // Get all the li elements in the menu
+    const menuItems = document.querySelectorAll('.topnav__menu li');
+  
+    // Add a click event listener to each li
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Programmatically click the close button when an li is clicked
+        closeButton.click();
+      });
+    });
+  } 
+
 });
 
 
@@ -118,6 +149,8 @@ function animateBalls(containerId, numBalls) {
         y: Math.random() * -12 // Change '12' to '-12' to reverse the direction
       };
 
+      let delay = window.innerWidth < 1024 ? 0 : 4000; // Set delay based on window width
+
       setTimeout(() => {
         let anim = ball.animate(
           [
@@ -132,15 +165,12 @@ function animateBalls(containerId, numBalls) {
             easing: "ease-in-out"
           }
         );
-      }, 4000);
+      }, delay);
     }
   }
 }
 
 // Call the function with the IDs of the containers and the number of balls
-
-
-// media query for balls animation
 
 // Call the function immediately when the page loads
 if (window.innerWidth < 1400) {

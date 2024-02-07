@@ -2,15 +2,14 @@
     display: flex;
     color: $first;
     background-color: $fourth;
-    height: 600px;
-    margin-bottom: -10px;
+    margin-bottom: 0 -10px;
     z-index: 2;
     position: relative;
 
 
 
     .section1 , .section2{
-        flex-basis: 50%;
+        flex-basis: 50%; 
         margin: 10px 40px;
         
         

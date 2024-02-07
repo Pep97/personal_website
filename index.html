@@ -57,19 +57,46 @@
   <header class="topnav wrapper">
     <img src="asset/g-b-high-resolution-logo.png" alt="Logo" class="logo">
     <nav>
-      <span id="nav-label" hidden>Navigation</span>
-      <button
-        id="btnOpen"
-        class="topnav__open"
-        aria-expanded="false"
-        aria-labelledby="nav-label"
-      >
-      <img src="/asset/hamburger.svg" alt=""/>
+
+
+      <section class="mobile-view">
+
+        <span id="nav-label" hidden>Navigation</span>
+        
+        <button
+            id="btnOpen"
+            class="topnav__open"
+            aria-expanded="false"
+            aria-labelledby="nav-label"
+            >
+            <img src="/asset/hamburger.svg" alt=""/>
         </button>
-      <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
-        <button class="topnav__close" id="btnClose" aria-label="Close">
-          <img src="asset/close.svg" alt="" width="28" height="27" />
-        </button>
+  
+        <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
+  
+          <button class="topnav__close" id="btnClose" aria-label="Close">
+              <img src="asset/close.svg" alt="" width="28" height="27" />
+          </button>
+            
+          <ul class="topnav__links">
+              <li class="topnav__item">
+                <a href="#home" class="topnav__link">Home</a>
+              </li>
+              <li class="topnav__item">
+                <a href="#about" class="topnav__link">About</a>
+              </li>
+              <li class="topnav__item">
+                <a href="#projects" class="topnav__link">Projects</a>
+              </li>
+              <li class="topnav__item">
+                <a href="#contact-me" class="topnav__link">Contact Me</a>
+              </li>
+          </ul>
+
+      </section>
+
+      <section class="pc-view">
+
         <ul class="topnav__links">
           <li class="topnav__item">
             <a href="#home" class="topnav__link">Home</a>
@@ -83,7 +110,10 @@
           <li class="topnav__item">
             <a href="#contact-me" class="topnav__link">Contact Me</a>
           </li>
-        </ul>
+       </ul>
+
+      </section>
+    
       </div>
     </nav>
 
@@ -232,7 +262,7 @@
                 <h2>BudgetBuddy</h2>
                 <p>In the application you can create an account and different categories to keep track of your expences, and add them over time.</p>
                 <p class="tag-code" style="display: none;">React CSS javacript</p>
-                <button><a href="https://gbbudgetbuddy.netlify.app/" target="_blank">Live Website</a></button> <!-- add arrow -->
+                <button class="mr-4"><a href="https://gbbudgetbuddy.netlify.app/" target="_blank">Live Website</a></button> <!-- add arrow -->
                 <button><a href="https://github.com/Pep97/Budgeting-app/tree/main" target="_blank">Code</a></button>            
               </div>
   
@@ -251,7 +281,7 @@
                 <h2>ShopSphere</h2>
                 <p>In the shop you can search for products, activate light or dask mode, add products to your cart and more...</p>
                 <p class="tag-code" style="display: none;">HTML SASS javascript</p>
-                <button><a href="https://gb-shopsphere.netlify.app/" target="_blank">Website Live</a></button>
+                <button class="mr-4"><a href="https://gb-shopsphere.netlify.app/" target="_blank">Live Website</a></button>
                 <button><a href="https://github.com/Pep97/ShopSphere--Ecommerce-website-" target="_blank">Code</a></button>
             </div>
   
@@ -270,7 +300,7 @@
                 <h2>WebPix</h2>
                 <p>You can check out the website and see different sections, if you click on one of the project it will open the project and if you complete and send the form you'll get a "request completed" message.</p>
                 <p class="tag-code" style="display: none;">HTML Javascript Bootstrap</p>
-                <button><a href="https://gb-webpix.netlify.app/">Live Website</a></button>
+                <button class="mr-4"><a href="https://gb-webpix.netlify.app/" target="_blank">Live Website</a></button>
                 <button><a href="https://github.com/Pep97/Webpix_Store-agency">Code</a></button>
             </div>
   
@@ -289,8 +319,7 @@
                 <h2>CrawlWix</h2>
                 <p>The crawler crawls a website you pick and it will show you a table with all the links that brings to the website itself and it will count them.</p>
                 <p class="tag-code" style="display: none;">HTML Javascript CSS nodejs expressjs</p>
-                <button>Coming soon...</button>
-                
+                <button class="mr-4"><a href="#" onclick="event.preventDefault();">Coming soon</a></button>                
             </div>
   
             <div class="project-image">

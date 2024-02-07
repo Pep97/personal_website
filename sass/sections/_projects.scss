@@ -151,6 +151,7 @@
                     margin-right: 25px;
                     
                     
+                    
                     &:hover {
                         background-color: $third;
                     }
@@ -158,8 +159,10 @@
                     a {
                         text-decoration: none;
                         color: $first;
-                        font-size: 23px;
-                        font-weight: bold;
+                        font-size: 21px;
+                        font-family: "JetBrains Mono",monospace;
+                        font-weight: 400;
+
                         
                     }
                 }
