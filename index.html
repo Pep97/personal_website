@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giuseppe Boinega</title>
     <link rel="icon" href="asset/g-favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/index.min.css">
     <script
       src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"
@@ -16,14 +19,14 @@
 
   <!-- navbar -->   
    
-  <nav>
+  <!-- <nav>
 
         
-        <div id="main-nav">
+         <div id="main-nav">
           
           <img src="asset/g-b-high-resolution-logo.png" alt="Logo">
          
-           <!-- Desktop navbar -->
+            Desktop navbar
         
           <ul class="normal-nav">
 
@@ -48,8 +51,44 @@
 
         </div>
 
-  </nav>
 
+  </nav> -->
+
+  <header class="topnav wrapper">
+    <img src="asset/g-b-high-resolution-logo.png" alt="Logo" class="logo">
+    <nav>
+      <span id="nav-label" hidden>Navigation</span>
+      <button
+        id="btnOpen"
+        class="topnav__open"
+        aria-expanded="false"
+        aria-labelledby="nav-label"
+      >
+      <img src="/asset/hamburger.svg" alt=""/>
+        </button>
+      <div class="topnav__menu" role="dialog" aria-labelledby="nav-label">
+        <button class="topnav__close" id="btnClose" aria-label="Close">
+          <img src="asset/close.svg" alt="" width="28" height="27" />
+        </button>
+        <ul class="topnav__links">
+          <li class="topnav__item">
+            <a href="#home" class="topnav__link">Home</a>
+          </li>
+          <li class="topnav__item">
+            <a href="#about" class="topnav__link">About</a>
+          </li>
+          <li class="topnav__item">
+            <a href="#projects" class="topnav__link">Projects</a>
+          </li>
+          <li class="topnav__item">
+            <a href="#contact-me" class="topnav__link">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+  </header>
   
 
 
@@ -179,67 +218,109 @@
             <li class="tag-list">Sass</li>
             <li class="tag-list">React</li>
             <li class="tag-list">Bootstrap</li>
-            <li class="tag-list">Next JS</li>
+            <li class="tag-list">NodeJS</li>
             <li class="tag-list">Typescript</li>
           </ul>
         </div>
         
         <div class="container2">
 
-          <div class="project">
+          <div class="project"> <!-- BudgetBuddy -->
 
             <div class="project-description">
-                <h3>Web Application 1</h3>
-                <h2>TITLE</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sunt architecto tenetur earum nulla delectus repellat, ducimus nam voluptatum, facere suscipit vitae expedita nesciunt, est at odio quam explicabo deserunt?</p>
-                <p class="tag-code" style="display: none;">Javascript CSS </p>
-                <button> Website</button> <!-- add arrow -->
-                <button> Code</button>
-            </div>
+                <h3>Budgeting app</h3>
+                <h2>BudgetBuddy</h2>
+                <p>In the application you can create an account and different categories to keep track of your expences, and add them over time.</p>
+                <p class="tag-code" style="display: none;">React CSS javacript</p>
+                <button><a href="https://gbbudgetbuddy.netlify.app/" target="_blank">Live Website</a></button> <!-- add arrow -->
+                <button><a href="https://github.com/Pep97/Budgeting-app/tree/main" target="_blank">Code</a></button>            
+              </div>
   
             <div class="project-image">
-              <img src="	https://media.giphy.com/media/L9C2iNyci0fgoIGYRh/giphy.gif" alt="">
+
+              <img src="asset/Project/gif-budgetbuddy.gif" alt="gif BudgetBuddy features presentation">
               
   
           </div>
           </div>
           
-          <div class="project">
+          <div class="project"> <!-- ShopSphere -->
 
             <div class="project-description">
-                <h3>Web Application 2</h3>
-                <h2>TITLE</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sunt architecto tenetur earum nulla delectus repellat, ducimus nam voluptatum, facere suscipit vitae expedita nesciunt, est at odio quam explicabo deserunt?</p>
-                <p class="tag-code" style="display: none;">CSS React</p>
-                <button> Website</button> <!-- add arrow -->
-                <button> Code</button>
+                <h3>Ecommerce Website</h3>
+                <h2>ShopSphere</h2>
+                <p>In the shop you can search for products, activate light or dask mode, add products to your cart and more...</p>
+                <p class="tag-code" style="display: none;">HTML SASS javascript</p>
+                <button><a href="https://gb-shopsphere.netlify.app/" target="_blank">Website Live</a></button>
+                <button><a href="https://github.com/Pep97/ShopSphere--Ecommerce-website-" target="_blank">Code</a></button>
             </div>
   
             <div class="project-image">
-              <img src="	https://media.giphy.com/media/L9C2iNyci0fgoIGYRh/giphy.gif" alt="">
               
+              <img src="asset/Project/gif-ShopSphere.gif" alt="gif BudgetBuddy features presentation">
+
   
           </div>
           </div>
 
-          <div class="project">
+          <div class="project"> <!-- WebPix -->
 
             <div class="project-description">
-                <h3>Web Application 3</h3>
-                <h2>TITLE</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sunt architecto tenetur earum nulla delectus repellat, ducimus nam voluptatum, facere suscipit vitae expedita nesciunt, est at odio quam explicabo deserunt?</p>
-                <p class="tag-code" style="display: none;">Javascript Bootstrap </p>
-                <button> Website</button> <!-- add arrow -->
-                <button> Code</button>
+                <h3>Web Agency website</h3>
+                <h2>WebPix</h2>
+                <p>You can check out the website and see different sections, if you click on one of the project it will open the project and if you complete and send the form you'll get a "request completed" message.</p>
+                <p class="tag-code" style="display: none;">HTML Javascript Bootstrap</p>
+                <button><a href="https://gb-webpix.netlify.app/">Live Website</a></button>
+                <button><a href="https://github.com/Pep97/Webpix_Store-agency">Code</a></button>
             </div>
   
             <div class="project-image">
-              <img src="	https://media.giphy.com/media/L9C2iNyci0fgoIGYRh/giphy.gif" alt="">
-              
+
+              <img src="asset/Project/gif-webpix.gif" alt="gif Webpix features presentation">
+                            
   
+            </div>
           </div>
+
+          <div class="project"> <!-- CrawlWix -->
+
+            <div class="project-description">
+                <h3>Website Crawler</h3>
+                <h2>CrawlWix</h2>
+                <p>The crawler crawls a website you pick and it will show you a table with all the links that brings to the website itself and it will count them.</p>
+                <p class="tag-code" style="display: none;">HTML Javascript CSS nodejs expressjs</p>
+                <button>Coming soon...</button>
+                
+            </div>
+  
+            <div class="project-image">
+
+              <img src="asset/Project/gif-CrawlWix.gif" alt="gif Webpix features presentation">
+                            
+  
+            </div>
           </div>
-          
+
+          <!-- PanelHack
+          <div class="project"> 
+
+            <div class="project-description">
+                <h3>Web Agency website</h3>
+                <h2>Webpix</h2>
+                <p>You can check out the website and see different sections, if you click on one of the project it will open the project and if you complete and send the form you'll get a "request completed" message.</p>
+                <p class="tag-code" style="display: none;">HTML Javascript Bootstrap</p>
+                <button> Website</button>
+                <button><a href="https://github.com/Pep97/Webpix_Store-agency">Code</a></button>
+            </div>
+  
+            <div class="project-image">
+
+              <img src="asset/Project/gif-webpix.gif" alt="gif Webpix features presentation">
+                            
+  
+            </div>
+          </div>
+           -->
           
 
 
