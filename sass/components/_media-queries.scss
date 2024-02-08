@@ -253,7 +253,7 @@
     }
 
     #home {
-        height: 1000px;
+        height: 1070px;
         display: flex;
         flex-direction: column;
 
@@ -261,7 +261,7 @@
 
         .container1{
             font-size: 35px;
-            margin: 85px 100px;
+            margin: 85px 100px 50px;
             
             justify-content: center;
             align-items: center;
@@ -276,10 +276,20 @@
 
             button{
                 margin-top: 20px;
-                font-size: 12px;
-                height: 35px;
-                width: 210px;
+                height: 40px;
+                width: 230px;
+
+                a{
+                    font-size: 19px;
+                
+                }
             }
+
+            h1, p{
+                animation : none;
+            }
+        
+            button.start-animation { animation: none; }
         }
 
         .container2{
@@ -322,10 +332,14 @@
             }
 
             button{
-                font-size: 23px;
                 height: 50px;
                 width: 240px;
                 margin-top: 40px;
+
+                a{
+                    font-size: 18px;
+                
+                }
             }
         }
 
@@ -444,10 +458,14 @@
 
         button{
             margin-top: 45px;
-            font-size: 20px;
-            height: 40px;
+            height: 35px;
             width: 240px;
             margin-left: 15px;
+
+            a{
+                font-size: 18px;
+            
+            }
 
         }
     }
@@ -489,7 +507,7 @@
 
 
     #home {
-        height: 1000px;
+        height: 1040px;
         display: flex;
         flex-direction: column;
 
@@ -497,7 +515,7 @@
 
         .container1{
             font-size: 35px;
-            margin: 75px 100px;
+            margin: 75px 100px 50px;
             
             justify-content: center;
             align-items: center;
@@ -510,9 +528,12 @@
 
             button{
                 margin-top: 20px;
-                font-size: 12px;
-                height: 35px;
-                width: 210px;
+                height: 40px;
+                width: 230px;
+
+                a{
+                    font-size: 19px;
+                }
             }
 
             h1, p{
@@ -564,11 +585,15 @@
             }
 
             button{
-                font-size: 23px;
                 height: 40px;
                 width: 230px;
                 margin-top: 40px;
                 margin-left: -13px;
+
+                a{
+                    font-size: 18px;
+                
+                }
                 
             }
         }
@@ -693,9 +718,14 @@
         button{
             margin-top: 45px;
             font-size: 20px;
-            height: 40px;
+            height: 35px;
             width: 240px;
             margin-left: 15px;
+
+            a{
+                font-size: 18px;
+            
+            }
 
         }
     }
@@ -781,9 +811,13 @@ nav{
 
             button{
                 margin-top: 20px;
-                font-size: 13px;
-                height: 35px;
+                height: 40px;
                 width: 230px;
+
+                a{
+                    font-size: 20px;
+                
+                }
             }
         }
 
@@ -827,10 +861,14 @@ nav{
             }
 
             button{
-                font-size: 23px;
                 height: 50px;
                 width: 240px;
                 margin-top: 40px;
+
+                a{
+                    font-size: 19px;
+                
+                }
             }
         }
 
@@ -953,9 +991,14 @@ nav{
         button{
             margin-top: 45px;
             font-size: 20px;
-            height: 40px;
+            height: 35px;
             width: 240px;
             margin-left: 15px;
+
+            a{
+                font-size: 19px;
+            
+            }
 
         }
     }
@@ -1042,6 +1085,11 @@ nav{
                 height: 35px;
                 width: 290px;
             }
+            h1, p{
+                animation : none;
+            }
+        
+            button.start-animation { animation: none; }
         }
 
         .container2{
@@ -1295,6 +1343,11 @@ nav{
                 height: 35px;
                 width: 230px;
             }
+            h1, p{
+                animation : none;
+            }
+        
+            button.start-animation { animation: none; }
         }
 
         .container2{
@@ -1684,6 +1737,12 @@ nav{
                 height: 50px;
                 width: 370px;
             }
+
+            h1, p{
+                animation : none;
+            }
+        
+            button.start-animation { animation: none; }
         }
 
         .container2{

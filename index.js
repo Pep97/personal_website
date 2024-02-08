@@ -83,26 +83,32 @@ media.addEventListener('change', function (e) {
 // automatically close the mobile menu when a link is clicked
 
 
-document.querySelector('.topnav__link').addEventListener('click', function(event) {
+// Get both .topnav__item and .topnav__link
+const clickableItems = document.querySelectorAll('.topnav__item, .topnav__link');
 
-  const openButton = document.getElementById('btnOpen');
+// Add the event listener to each item
+clickableItems.forEach(item => {
+  item.addEventListener('click', function(event) {
 
-  if (openButton.getAttribute('aria-expanded') === 'true' ) {
-    // Get the close button
-    const closeButton = document.querySelector('.topnav__close');
-  
-    // Get all the li elements in the menu
-    const menuItems = document.querySelectorAll('.topnav__menu li');
-  
-    // Add a click event listener to each li
-    menuItems.forEach(item => {
-      item.addEventListener('click', () => {
-        // Programmatically click the close button when an li is clicked
-        closeButton.click();
+    const openButton = document.getElementById('btnOpen');
+
+    if (openButton.getAttribute('aria-expanded') === 'true' ) {
+      // Get the close button
+      const closeButton = document.querySelector('.topnav__close');
+    
+      // Get all the li elements in the menu
+      const menuItems = document.querySelectorAll('.topnav__menu li');
+    
+      // Add a click event listener to each li
+      menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+          // Programmatically click the close button when an li is clicked
+          closeButton.click();
+        });
       });
-    });
-  } 
+    } 
 
+  });
 });
 
 

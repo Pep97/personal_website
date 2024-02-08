@@ -13,8 +13,12 @@
       src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"
       async
     ></script>
+
+
 </head>
 <body>
+
+
 
 
   <!-- navbar -->   
@@ -95,8 +99,8 @@
 
       </section>
 
-      <section class="pc-view">
-
+      <section class="pc-view" style="display: none;"> 
+        <!-- display:none -> is to avoid the starting of the page, otherwise you may see 2 navbar before the browser goes to the script -->
         <ul class="topnav__links">
           <li class="topnav__item">
             <a href="#home" class="topnav__link">Home</a>
@@ -139,8 +143,7 @@
               <h1>Hi, I'm Giuseppe Boinega!</h1>
               <p>I'm a Front-end Developer.</p>
               <button class="start-animation move-animation">
-                <a href="#resume">Download Resume</a>
-              </button>
+                <a href="./asset/Giuseppe-Boinega-Resume.pdf" download>Download Resume</a>              </button>
             </div>
           </div>
   
@@ -186,8 +189,7 @@
             I am always eager to learn new skills and technologies to stay ahead of the curve!
           </p>
           <button>
-            <a href="#resume">Download Resume</a>
-          </button>
+            <a href="./asset/Giuseppe-Boinega-Resume.pdf" download>Download Resume</a>          </button>
         </div>
 
 
@@ -260,7 +262,7 @@
             <div class="project-description">
                 <h3>Budgeting app</h3>
                 <h2>BudgetBuddy</h2>
-                <p>In the application you can create an account and different categories to keep track of your expences, and add them over time.</p>
+                <p>In the application you can create an account and different categories to keep track of your expenses, and add them over time.</p>
                 <p class="tag-code" style="display: none;">React CSS javacript</p>
                 <button class="mr-4"><a href="https://gbbudgetbuddy.netlify.app/" target="_blank">Live Website</a></button> <!-- add arrow -->
                 <button><a href="https://github.com/Pep97/Budgeting-app/tree/main" target="_blank">Code</a></button>            
@@ -279,7 +281,7 @@
             <div class="project-description">
                 <h3>Ecommerce Website</h3>
                 <h2>ShopSphere</h2>
-                <p>In the shop you can search for products, activate light or dask mode, add products to your cart and more...</p>
+                <p>In the shop you can search for products, activate light or dark mode, add products to your cart and more...</p>
                 <p class="tag-code" style="display: none;">HTML SASS javascript</p>
                 <button class="mr-4"><a href="https://gb-shopsphere.netlify.app/" target="_blank">Live Website</a></button>
                 <button><a href="https://github.com/Pep97/ShopSphere--Ecommerce-website-" target="_blank">Code</a></button>
@@ -298,7 +300,7 @@
             <div class="project-description">
                 <h3>Web Agency website</h3>
                 <h2>WebPix</h2>
-                <p>You can check out the website and see different sections, if you click on one of the project it will open the project and if you complete and send the form you'll get a "request completed" message.</p>
+                <p>You can check out the website and see different sections, if you click on one of the project it will open the projects and if you complete and send the form you'll get a "request completed" message.</p>
                 <p class="tag-code" style="display: none;">HTML Javascript Bootstrap</p>
                 <button class="mr-4"><a href="https://gb-webpix.netlify.app/" target="_blank">Live Website</a></button>
                 <button><a href="https://github.com/Pep97/Webpix_Store-agency">Code</a></button>
@@ -394,8 +396,8 @@
     <p>Copyright © 2024 Giuseppe Boinega</p>
   </footer>
 
-
   <script src="index.js"></script>
+
 
 </body>
 </html>
