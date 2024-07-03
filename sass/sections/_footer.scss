@@ -59,16 +59,48 @@ footer{
         }
     }
 
-    p{
-        font-size: 15px;
-        font-weight: 400;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        padding: 0;
+    .copyright{
 
-        z-index: 2;
-        position: relative;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    
+        
+
+
+        p{
+            font-size: 15px;
+            font-weight: 400;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding: 0;
+    
+            z-index: 2;
+            position: relative;
+    
+            button{
+                background-color: $third;
+                color: $first;
+                border: none;
+                padding: 2px 8px;
+                border-radius: 5px;
+                font-size: 15px;
+                font-weight: 400;
+                cursor: pointer;
+                transition: 0.3s;
+    
+                a{
+                    text-decoration: none;
+                }
+    
+                &:hover{
+                    background-color: $second;
+                }
+            }
+        }
     }
+
 
     
     
