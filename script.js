@@ -354,18 +354,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Function to fetch data from the back end
   function fetchData() {
-      return fetch('http://localhost:3000/value')
-          .then(response => response.json())
-          .then(data => {
-              if (data.message) {
-                  hiddenInput.value = data.message; // Use the result from the server
-              } else {
-                  console.error('Message not found in the response');
-              }
-          })
-          .catch(error => {
-              console.error('Error fetching data:', error);
-          });
+    return fetch('/.netlify/functions/submitForm')
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                hiddenInput.value = data.message; // Use the result from the server
+            } else {
+                console.error('Message not found in the response');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
   }
 
   // Handle form submission
@@ -376,7 +376,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData.entries());
 
-    fetch('/.netlify/functions/submitForm', {
+    fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: JSON.stringify(data),
     })
