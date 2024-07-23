@@ -8,7 +8,7 @@ function buildStyles() {
   return src('sass/**/*.scss')
     .pipe(gulpSass({ outputStyle: 'compressed' }))
     .pipe(purgecss({ content: ['*.html'] }))
-    .pipe(dest('css'));
+    .pipe(dest('dist/css')); // Output to 'dist/css'
 }
 
 // This function will watch for changes in SASS files and then run buildStyles
