@@ -12,6 +12,7 @@
         flex-direction: column;
         align-items: center;
         padding-top: 35px;
+        padding-bottom: 20px;
         margin: 0;
 
         h1{
@@ -44,15 +45,10 @@
       z-index: 2;
       margin: 0 auto;
       overflow: hidden;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
     }
     
     form {
       padding: 1rem 0.9rem;
-      z-index: 10;
-      overflow: hidden;
-      position: relative;
       color: $third;
     
       .title {
@@ -61,40 +57,65 @@
         font-size: 1.5rem;
         margin-bottom: 0.4rem;
         margin-top: 0.4rem;
+        text-align: center;
       }
 
       .input-container {
         position: relative;
         margin: 1rem 0;
   
-        .input {
-          width: 90%;
-          outline: none;
-          border: 2px solid $third;
-          background: none;
-          padding: 0.6rem 1.2rem;
-          color: $third;
-          font-weight: 500;
-          font-size: 0.95rem;
-          letter-spacing: 0.5px;
-          border-radius: 5px;
-          transition: 0.3s;
-    
-        }
       }
+      .input {
+        width: 99.5%;
+        outline: none;
+        border: 2px solid $third;
+        padding: 0.6rem 0rem;
+        background: none;
+        color: $third;
+        font-weight: 500;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        border-radius: 5px;
+        transition: 0.3s;
+  
+      }
+
+
+      .btn {
+        padding: 0.6rem 1.3rem;
+        margin: 0;
+        width: 100%;
+        background-color: $third;
+        color: $first;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: "JetBrains Mono",monospace;
+        box-shadow: rgba(17, 57, 70, 1) 2px 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+        appearance: none;
+        border: 0;
+  
+  
+      }
+      
+      .btn:hover {
+        background-color: transparent;
+        background-color: $second;
+  
+      }
+
     }
 
     textarea.input {
-      padding: 0.8rem 1.2rem;
+      // padding: 0.8rem 1.2rem;
       min-height: 150px;
       border-radius: 5px;
       resize: none;
       overflow-y: auto;
     }
-    
-    
-
-    
     
     
     .input-container label {
@@ -116,31 +137,7 @@
       transform: translateY(0);
     }
     
-    .btn {
-      padding: 0.6rem 1.3rem;
-      background-color: $third;
-      font-size: 18px;
-      font-weight: bold;
-      color: $first;
-      border-radius: 5px;
-      outline: none;
-      cursor: pointer;
-      transition: 0.3s;
-      margin: 0;
-      width: 100%;
-      font-family: "JetBrains Mono",monospace;
-      box-shadow: rgba(17, 57, 70, 1) 2px 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-      appearance: none;
-      border: 0;
 
-
-    }
-    
-    .btn:hover {
-      background-color: transparent;
-      background-color: $second;
-
-    }
     
     .input-container span {
       position: absolute;
@@ -187,38 +184,32 @@
       width: 50%;
       opacity: 1;
     }
-    
-    @media (max-width: 850px) {
-      .form {
-        grid-template-columns: 1fr;
-      }
-    
-    }
-    
-    @media (max-width: 480px) {
-      .container {
-        padding: 1.5rem;
-      }
+        
+    // @media (max-width: 480px) {
+    //   .container {
+    //     padding: 1.5rem;
+    //   }
 
-      form{
-        padding: 1.7rem 1.6rem;
-      }
+    //   form{
+    //     padding: 1.7rem 1.6rem;
+    //   }
     
-      .title {
-        font-size: 1.15rem;
-      }
+    //   .title {
+    //     font-size: 1.15rem;
+    //   }
     
-      .input {
-        padding: 0.45rem 1.2rem;
-      }
+    //   .input {
+    //     padding: 0.45rem 1.2rem;
+    //   }
     
-      .btn {
-        padding: 0.45rem 1.2rem;
-      }
-    }
+    //   .btn {
+    //     padding: 0.45rem 1.2rem;
+    //   }
+    // }
 
 
 }
+
 
 
 

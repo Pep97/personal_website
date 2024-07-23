@@ -325,7 +325,7 @@ document.querySelectorAll('#projects li').forEach(function(li) {
 
 // ---------------------------------------------------------
 
-
+// Animation for when the user click an input on the form
 const inputs = document.querySelectorAll(".input");
 
 function focusFunc() {
@@ -346,5 +346,64 @@ inputs.forEach((input) => {
 });
 
 
+// giving the hidden input a value from the back end
 
+document.addEventListener("DOMContentLoaded", function() {
+  const hiddenInput = document.querySelector('.hidden_input');
+  const contactForm = document.getElementById('contactForm');
 
+  // Function to fetch data from the back end
+  function fetchData() {
+      return fetch('http://localhost:3000/value')
+          .then(response => response.json())
+          .then(data => {
+              if (data.message) {
+                  hiddenInput.value = data.message; // Use the result from the server
+              } else {
+                  console.error('Message not found in the response');
+              }
+          })
+          .catch(error => {
+              console.error('Error fetching data:', error);
+          });
+  }
+
+  // Handle form submission
+  contactForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      fetchData().then(() => {
+          const formData = new FormData(contactForm);
+
+          fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              body: formData,
+          })
+          .then(response => response.json())
+          .then(data => {
+              if (data.success) {
+                  // Handle success (e.g., display a success message)
+                  showCustomAlert("Message Sent successfully");
+              } else {
+                  // Handle error (e.g., display an error message)
+                  alert("Message sending failed");
+              }
+              hiddenInput.value = ""; // Clear the hidden input value after form submission
+          })
+          .catch(error => {
+              // Handle network errors
+              console.error('Error:', error);
+              alert("There was a network error.");
+          });
+      });
+  });
+});
+
+function showCustomAlert(message) {
+  document.getElementById('customAlertMessage').textContent = message;
+  document.getElementById('customAlert').style.display = 'flex';
+}
+
+function closeCustomAlert() {
+  document.getElementById('customAlert').style.display = 'none';
+}

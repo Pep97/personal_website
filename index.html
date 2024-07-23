@@ -12,26 +12,24 @@
   gtag('config', 'G-QM47BW07XY');
 </script>
 
-  <script type="text/javascript">
+<!-- Clairty -->
+<script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "kzjf89qtz6");
-  </script> <!-- Clairty -->
+</script> 
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giuseppe Boinega</title>
-  <link rel="icon" href="asset/g-favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/index.min.css">
-  <script
-    src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"
-    async
-  ></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giuseppe Boinega</title>
+<link rel="icon" href="asset/g-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/index.min.css">
+<script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js" async></script>
 
 
 
@@ -289,14 +287,14 @@
                 <p class="tag-code" style="display: none;">React CSS javacript</p>
                 <button class="mr-4"><a href="https://gbbudgetbuddy.netlify.app/" target="_blank">Live Website</a></button>
                 <button><a href="https://github.com/Pep97/Budgeting-app/tree/main" target="_blank">Code</a></button>            
-              </div>
+            </div>
   
             <div class="project-image">
 
               <img src="asset/Project/gif-budgetbuddy.gif" alt="gif BudgetBuddy features presentation">
               
   
-          </div>
+            </div>
           </div>
 
           <div class="project"> <!-- GestionaleJet -->
@@ -378,38 +376,45 @@
 
       <!-- Contact me -->
       <section id="contact-me">
+        
         <div class="container1">
           <h1>Get in touch</h1>
           <p>If you wanna get in touch, talk to me about a project or just say hi.
           Send me an email at <strong>giuseppe.boinega1@gmail.com</strong> or complete the form below ;)</p>
         </div>
 
-
-          <div class="form">
-              <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
-                <input type="hidden" name="access_key" value="9a5cab40-949e-436c-996f-c508a4b8fe11">
-                <h3 class="title">Contact me</h3>
-                <div class="input-container">
-                  <input type="text" name="name" class="input" />
+        <div class="form">
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
+              <input type="hidden" name="access_key" value="" class="hidden_input">
+              <h3 class="title">Contact me</h3>
+              <div class="input-container">
+                  <input type="text" name="name" required class="input" />
                   <label for="">Username</label>
                   <span>Username</span>
-                </div>
-                <div class="input-container">
-                  <input type="email" name="email" class="input" />
+              </div>
+              <div class="input-container">
+                  <input type="email" name="email" required class="input" />
                   <label for="">Email</label>
                   <span>Email</span>
-                </div>
-                <div class="input-container textarea">
-                  <textarea name="message" class="input"></textarea>
+              </div>
+              <div class="input-container textarea">
+                  <textarea name="message" required class="input"></textarea>
                   <label for="">Message</label>
                   <span>Message</span>
-                </div>
-                <input type="submit" value="Send" class="btn" />
-              </form>
-          </div>
-
+              </div>
+              <input type="submit" value="Send" class="btn" />
+          </form>
+      </div>
 
       </section>
+
+      <!-- Customer alert for form -->
+      <div id="customAlert" class="custom-alert" style="display: none;">
+        <div class="custom-alert-content">
+          <p id="customAlertMessage">test</p>
+          <span class="custom-alert-close" onclick="closeCustomAlert()">&times;</span>
+        </div>
+      </div>
 
 
 
@@ -446,7 +451,7 @@
     
   </footer>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 
 
 </body>

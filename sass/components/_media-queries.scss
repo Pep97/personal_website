@@ -253,7 +253,7 @@
     }
 
     #home {
-        height: 1070px;
+        height: 1100px;
         display: flex;
         flex-direction: column;
 
@@ -453,6 +453,10 @@
         }
 
         p{
+            font-size: 18px;
+        }
+
+        strong{
             font-size: 18px;
         }
 
@@ -704,7 +708,7 @@
     }
 
     #contact-me {
-        height: 450px;
+        height: 100%;
         h1{
             font-size: 50px;
             margin-top: 25px;
@@ -712,6 +716,10 @@
         }
 
         p{
+            font-size: 16px;
+        }
+
+        strong{
             font-size: 16px;
         }
 
@@ -762,6 +770,10 @@
 
             height: 800px;
         }
+
+        // #home{
+        //     height: 1250px;
+        // }
     }
 
 nav{
@@ -785,7 +797,7 @@ nav{
     }
 
     #home {
-        height: 1150px;
+        height: 1200px;
         display: flex;
         flex-direction: column;
 
@@ -1035,6 +1047,10 @@ nav{
 
             height: 800px;
         }
+
+        // #home{
+        //     height: 1500px;
+        // }
     }
 
     nav{
@@ -1240,7 +1256,7 @@ nav{
     }
 
     #contact-me {
-        height: 400px;
+        height: 100%;
         h1{
             font-size: 50px;
             margin-top: 25px;
@@ -1316,7 +1332,7 @@ nav{
     }
 
     #home {
-        height: 1390px;
+        height: 1410px;
         display: flex;
         flex-direction: column;
 
@@ -1497,7 +1513,9 @@ nav{
 
             height: 800px;
         }
+
     }
+
 
     nav{
 
@@ -1522,7 +1540,7 @@ nav{
     }
 
     #home {
-        height: 1370px;
+        height: 1550px;
         display: flex;
         flex-direction: column;
 
@@ -1649,7 +1667,7 @@ nav{
     }
 
     #contact-me {
-        height: 400px;
+        height: 100%;
         h1{
             font-size: 50px;
             margin-top: 25px;
@@ -1697,7 +1715,7 @@ nav{
 // adjust measure between 425px and 768px
 // add media between 425px and 768px
 
-@media (min-width: 768px){
+@media (min-width: 710px){
     body{
 
 
@@ -1719,7 +1737,8 @@ nav{
 
         .container1{
             font-size: 60px;
-            margin: 235px 30px;
+            margin: 235px 30px 150px 30px;
+            
             justify-content: center;
             align-items: center;
 
@@ -1881,7 +1900,7 @@ nav{
     }
 
     #contact-me {
-        height: 500px;
+        height: 100%;
         h1{
             font-size: 70px;
             margin-top: 25px;
@@ -1929,6 +1948,14 @@ nav{
 @media (min-width: 870px){
     #home{
         height: 1600px;
+
+        .container1{
+            margin-bottom: 160px;
+        }
+
+        .section2{
+            padding-bottom: 20px;
+        }
     }
 }
 
@@ -1942,7 +1969,7 @@ nav{
 
 
     #home {
-        height: 800px;
+        height: 830px;
         flex-direction: row;
         justify-content: left;
 
@@ -2103,7 +2130,7 @@ nav{
     }
 
     #contact-me {
-        height: 460px;
+        height: 100%;
         h1{
             font-size: 55px;
             margin-top: 25px;
@@ -2150,7 +2177,7 @@ nav{
 
 
     #home {
-        height: 850px;
+        height: 880px;
 
         .container1{
             font-size: 55px;
@@ -2211,7 +2238,7 @@ nav{
 
 
     #home {
-        height: 850px;
+        height: 920px;
 
         .container1{
             font-size: 50px;
@@ -2391,7 +2418,7 @@ nav{
 
     
     #home{
-        height: 900px;
+        height: 930px;
 
         .container1{
             font-size: 55px;

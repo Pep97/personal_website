@@ -1,0 +1,42 @@
+.custom-alert {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+    
+    .custom-alert-content {
+      position: relative;
+      bottom: 300px;
+      width: 400px;
+      max-width: 90%;
+      height: 60px;
+      background-color: $third;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      color: $first;
+      display: flex;
+    }
+    
+    #customAlertMessage{
+      margin: auto 20px;
+      font-size: 15px;
+      font-weight: bold;
+      flex-basis: 90%;
+    
+    }
+    .custom-alert-close {
+      cursor: pointer;
+      font-size: 20px;
+      margin: auto;
+      text-align: center;
+      font-weight: bold;
+      color: $first;
+      flex-basis: 10%;
+    }
+  }
