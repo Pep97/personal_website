@@ -369,29 +369,32 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Handle form submission
-  // script.js
   contactForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData.entries());
+    fetchData().then(() => {
+      const formData = new FormData(contactForm);
 
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: JSON.stringify(data),
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        showCustomAlert("Message Sent successfully");
-      } else {
-        alert("Message sending failed");
-      }
-      hiddenInput.value = ""; // Clear the hidden input value after form submission
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert("There was a network error.");
+      fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              // Handle success (e.g., display a success message)
+              showCustomAlert("Message Sent successfully");
+          } else {
+              // Handle error (e.g., display an error message)
+              alert("Message sending failed");
+          }
+          hiddenInput.value = ""; // Clear the hidden input value after form submission
+      })
+      .catch(error => {
+          // Handle network errors
+          console.error('Error:', error);
+          alert("There was a network error.");
+      });
     });
   });
 });

@@ -1,2 +1,6 @@
 api.env
 vscode/
+
+
+# Local Netlify folder
+.netlify

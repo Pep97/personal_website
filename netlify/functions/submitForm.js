@@ -15,3 +15,5 @@ exports.handler = async (event, context) => {
         };
     }
 };
+
+// run "netlify dev" in the terminal to start the server
