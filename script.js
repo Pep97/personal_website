@@ -346,7 +346,7 @@ inputs.forEach((input) => {
 });
 
 
-// giving the hidden input a value from the back end
+// giving the hidden input a value from the back end  and submitting the form
 
 document.addEventListener("DOMContentLoaded", function() {
   const hiddenInput = document.querySelector('.hidden_input');

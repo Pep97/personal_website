@@ -33,4 +33,4 @@ To make changes to the styles:
 
 ## Form Management
 
-I'm using [web3forms](https://web3forms.com) to receive emails when someone complete the form, to make sure you can do the same sign-up on their service and get your access key , then create an api.env file and write inside this `VALUE=YOUR-ACCESS-KEY`
+I'm using [web3forms](https://web3forms.com) to receive emails when someone complete the form, to make sure you can do the same sign-up on their service and get your access key , then create an api.env file and write inside this `VALUE=YOUR-ACCESS-KEY`  
