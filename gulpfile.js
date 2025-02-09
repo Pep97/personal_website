@@ -3,8 +3,7 @@ const sass = require('sass');
 const gulpSass = require('gulp-dart-sass');
 const purgecss = require('gulp-purgecss')
 
-// this fucntion will compile sass to css
-
+// This function will compile SASS to CSS
 function buildStyles() {
   return src('sass/**/*.scss')
     .pipe(gulpSass({ outputStyle: 'compressed' }))
@@ -12,12 +11,13 @@ function buildStyles() {
     .pipe(dest('css'))
 }
 
-// this function will watch for changes in sass.scss and then run buildStyles
-
+// This function will watch for changes in sass files and then run buildStyles
 function watchTask() {
   watch(['sass/**/*.scss', '*.html'], buildStyles)
 }
 
+// Define default task that watches for changes
 exports.default = series(buildStyles, watchTask);
 
-//once you created this page you can run gulp in the terminal and it will watch for changes in sass.scss and then run buildStyles
+// Export "build" so Netlify can run "gulp build"
+exports.build = buildStyles;
